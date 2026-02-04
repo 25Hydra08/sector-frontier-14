@@ -3372,3 +3372,10 @@ Entries:
   id: 235
   time: '2026-02-04T03:31:17.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/465
+- author: LeptonComm
+  changes:
+    - type: Tweak
+      message: Новогодний ремап Станции Фронтир был заменен на стандартную станцию
+  id: 236
+  time: '2026-02-04T03:31:48.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/466
