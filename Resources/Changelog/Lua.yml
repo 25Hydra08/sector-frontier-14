@@ -3363,3 +3363,12 @@ Entries:
   id: 234
   time: '2026-02-04T03:23:45.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/464
+- author: fox76055
+  changes:
+    - type: Tweak
+      message: >-
+        Legionnaire: Удалена версия с дравонами. Версия с ЭМП вооружением
+        получила ремап.
+  id: 235
+  time: '2026-02-04T03:31:17.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/465
