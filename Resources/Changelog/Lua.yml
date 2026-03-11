@@ -3607,3 +3607,12 @@ Entries:
   id: 252
   time: '2026-03-10T15:31:13.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/502
+- author: harara228-prog
+  changes:
+    - type: Add
+      message: >-
+        Добавлен шаттл Ёрмунганд для пиратской верфи с ультра сервером
+        вооружения и двумя 203мм Каргилами, АК502 и Дравонами-57мм и 1 Хароном.
+  id: 253
+  time: '2026-03-11T02:08:02.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/498
