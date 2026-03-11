@@ -3616,3 +3616,12 @@ Entries:
   id: 253
   time: '2026-03-11T02:08:02.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/498
+- author: Vecortys
+  changes:
+    - type: Fix
+      message: >-
+        Исправлено отображение крыльев у аркан. Теперь их видно поверх рук и
+        ног.
+  id: 254
+  time: '2026-03-11T13:36:17.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/503
