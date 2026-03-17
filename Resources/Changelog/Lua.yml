@@ -3666,3 +3666,14 @@ Entries:
   id: 256
   time: '2026-03-17T09:43:57.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/508
+- author: harara228-prog
+  changes:
+    - type: Add
+      message: >-
+        Добавлен шаттл Gungnir, с 2 220мм-Сайбрексами и 4 Дравонами-57мм, а так
+        же с высокомощным сервером вооружения на борту.
+    - type: Remove
+      message: Удалён шаттл Vega.
+  id: 257
+  time: '2026-03-17T09:47:08.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/499
