@@ -3739,3 +3739,14 @@ Entries:
   id: 263
   time: '2026-03-20T21:46:24.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/518
+- author: harara228-prog
+  changes:
+    - type: Add
+      message: >-
+        Добавлен шаттл Квельдрёв - оснащенный 1 Чароном, и 2 торпедными
+        аппаратами. Имеет на борту средний сервер вооружения.
+    - type: Remove
+      message: Удалён шаттл Перл.
+  id: 264
+  time: '2026-03-21T07:17:43.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/509
