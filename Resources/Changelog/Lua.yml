@@ -3841,3 +3841,10 @@ Entries:
   id: 271
   time: '2026-04-16T13:35:51.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/542
+- author: Nz
+  changes:
+    - type: Fix
+      message: Нианы и унатхи теперь имеют свои акценты.
+  id: 272
+  time: '2026-04-16T13:37:22.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/545
