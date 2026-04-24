@@ -503,7 +503,7 @@
   - type: SolutionContainerManager
     solutions:
       hypospray:
-        maxVol: 20
+        maxVol: 10
   - type: SolutionContainerVisuals
     maxFillLevels: 4
   - type: Injector
