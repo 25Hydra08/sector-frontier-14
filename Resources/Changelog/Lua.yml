@@ -3950,3 +3950,13 @@ Entries:
   id: 280
   time: '2026-04-25T14:37:03.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/500
+- author: HacksLua
+  changes:
+    - type: Tweak
+      message: >-
+        мех <img width="840" height="466" alt="image"
+        src="https://github.com/user-attachments/assets/66e98ee3-e8d9-4ad0-a022-082cf243676c"
+        />
+  id: 281
+  time: '2026-04-25T20:53:27.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/554
