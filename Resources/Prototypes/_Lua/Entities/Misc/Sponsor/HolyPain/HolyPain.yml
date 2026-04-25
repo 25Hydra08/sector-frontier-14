@@ -457,8 +457,7 @@
     - BluespaceSyringeInjectMode
     - BluespaceSyringeDrawMode
   - type: SolutionContainerVisuals
-    maxFillLevels: 2
-    fillBaseName: syringe
+    maxFillLevels: 0
   - type: Tag
     tags:
     - Syringe
