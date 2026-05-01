@@ -3960,3 +3960,18 @@ Entries:
   id: 281
   time: '2026-04-25T20:53:27.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/554
+- author: HacksLua
+  changes:
+    - type: Add
+      message: Добавлен полноценный магазин(терминал) Акционеров на F4
+    - type: Add
+      message: Добавлена новая валюта LunaCoin
+    - type: Remove
+      message: Удален аплинк акционеров
+    - type: Tweak
+      message: >-
+        Все аплинки теперь привязаны к балансу пользователя, их больше ненужно
+        пополнять.
+  id: 282
+  time: '2026-05-01T19:36:15.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/564
