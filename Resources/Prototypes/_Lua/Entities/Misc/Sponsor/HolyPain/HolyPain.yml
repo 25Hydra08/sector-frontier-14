@@ -30,7 +30,7 @@
   - type: Sprite
     sprite: _Lua/Sponsor/HolyPain/HolyPainCrystalBag.rsi
   - type: Storage
-    maxItemSize: Ginormous
+    maxItemSize: Huge
     grid:
     - 0,0,14,7
     storageOpenSound:
@@ -456,9 +456,6 @@
     allowedModes:
     - BluespaceSyringeInjectMode
     - BluespaceSyringeDrawMode
-  - type: SolutionContainerVisuals
-    maxFillLevels: 2
-    fillBaseName: syringe
   - type: Tag
     tags:
     - Syringe
