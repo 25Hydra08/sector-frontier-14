@@ -4020,3 +4020,16 @@ Entries:
   id: 286
   time: '2026-05-08T03:58:11.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/570
+- author: 25Hydra08
+  changes:
+    - type: Add
+      message: Добавлено веселье!
+    - type: Remove
+      message: Удалено веселье!
+    - type: Tweak
+      message: Изменено веселье!
+    - type: Fix
+      message: Исправлено веселье!
+  id: 287
+  time: '2026-05-08T03:58:39.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/571
