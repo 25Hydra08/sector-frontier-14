@@ -18,7 +18,6 @@
     - DrinkJuiceOrangeCartonXL
     - BronzeVisor
 
-
 #region Сумка
 - type: entity
   parent: ClothingBackpackDuffel
@@ -94,13 +93,6 @@
   - type: TTS
     voice: Cirilla
   - type: Speech
-  - type: StorageFill
-    contents:
-      - id: BoxPillCanisterHolyPain
-      - id: PlushieHolyPainEri
-  - type: ExplosionResistance
-    damageCoefficient: 0
-    worn: false
 
 #region таблетница
 - type: entity
@@ -388,8 +380,7 @@
   - type: SolutionContainerManager
     solutions:
       beaker:
-        maxVol: 1000
-
+        maxVol: 200
 
 #region бронзовый шприц
 #база бронзового шприца
@@ -450,7 +441,7 @@
   - type: SolutionContainerManager
     solutions:
       injector:
-        maxVol: 100
+        maxVol: 15
   - type: Injector
     activeModeProtoId: BluespaceSyringeDrawMode
     allowedModes:
@@ -500,7 +491,7 @@
   - type: SolutionContainerManager
     solutions:
       hypospray:
-        maxVol: 20
+        maxVol: 10
   - type: SolutionContainerVisuals
     maxFillLevels: 4
   - type: Injector
@@ -524,17 +515,6 @@
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-insulative
-  - type: Reflect
-    reflectProb: 0.05
-  - type: HardsuitIdentification
-    securityMode: Acid
-    emaggable: false
-    gibWearer: false
-    createAcidEffect: true
-  - type: HardsuitDNARadial
-  - type: TTS
-    voice: Cirilla
-  - type: Speech
 
 #region очки
 - type: entity
@@ -565,12 +545,3 @@
     toggleAction: ToggleNightVision
   - type: Tag
     tags: []
-  - type: HardsuitIdentification
-    securityMode: Acid
-    emaggable: false
-    gibWearer: false
-    createAcidEffect: true
-  - type: HardsuitDNARadial
-  - type: TTS
-    voice: Cirilla
-  - type: Speech
