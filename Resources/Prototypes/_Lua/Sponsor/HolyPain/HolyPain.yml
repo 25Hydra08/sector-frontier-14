@@ -100,11 +100,9 @@
     voice: Cirilla
   - type: Speech
   - type: ToggleableClothing
-    requiredSlot: back
-    blockUnequipWhenAttached: false
-    replaceCurrentClothing: true
-    clothingPrototypes:
-      outerClothing: HolyPainRankKitHardsuit
+    clothingPrototype: HolyPainRankKitHardsuit
+    requiredSlot: BACK
+    slot: outerClothing
 
 #region Доспех
 - type: entity
