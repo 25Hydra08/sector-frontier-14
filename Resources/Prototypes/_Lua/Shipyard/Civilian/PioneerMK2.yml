@@ -8,7 +8,7 @@
   parent: BaseVessel
   name: Pioneer-II
   description: Маленький, дешёвый, и удобный шаттл с многолетней историей. Легенда в новом корпусе.
-  price: 17800
+  price: 17899
   mass: 32
   category: Micro
   group: Shipyard
