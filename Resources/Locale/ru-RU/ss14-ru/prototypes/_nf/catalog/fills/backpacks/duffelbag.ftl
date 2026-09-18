@@ -77,6 +77,6 @@ ent-ClothingBackpackDuffelEVABundleMercenary = набор ЕВА наёмник�
 ent-ClothingBackpackDuffelEVABundlePrivateSec = набор ЕВА телохранителя
     .suffix = Заполненный
     .desc = { ent-ClothingBackpackDuffel.desc }
-ent-ClothingBackpackDuffelEVABundleNfsd = набор ЕВА СРБС
+ent-ClothingBackpackDuffelEVABundleNfsd = набор ЕВА Frontline Solutions
     .suffix = Заполненный
     .desc = { ent-ClothingBackpackDuffelNfsdBrown.desc }

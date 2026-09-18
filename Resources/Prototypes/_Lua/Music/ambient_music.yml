@@ -17,3 +17,22 @@
    - /Audio/_Lua/Stations/Barkhan-8/system-breakdown_88495.ogg
    - /Audio/_Lua/Stations/Barkhan-8/terror-in-the-shadows_88434.ogg
    - /Audio/_Lua/Stations/Barkhan-8/unraveling-secrets_88465.ogg
+
+- type: ambientMusic
+  id: HorizonMusic
+  sound:
+    collection: HorizonMusic
+
+- type: soundCollection
+  id: HorizonMusic
+  files:
+   - /Audio/_Lua/Stations/Horizon/Horizon-1.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-2.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-3.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-4.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-5.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-6.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-7.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-8.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-9.ogg
+   - /Audio/_Lua/Stations/Horizon/Horizon-10.ogg

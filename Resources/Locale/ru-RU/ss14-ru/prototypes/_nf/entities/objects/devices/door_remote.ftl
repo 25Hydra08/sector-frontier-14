@@ -1,2 +1,2 @@
-ent-DoorRemoteNfsd = пульт от шлюзов СРБС
+ent-DoorRemoteNfsd = пульт от шлюзов Frontline Solutions
     .desc = { ent-DoorRemoteDefault.desc }

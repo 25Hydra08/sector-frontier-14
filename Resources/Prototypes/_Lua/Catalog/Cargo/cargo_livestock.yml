@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: CrateNPCMothroachFriendlyCargo
+  icon:
+    sprite: Structures/Storage/Crates/livestock.rsi
+    state: icon
+  product: CrateNPCMothroachFriendly
+  cost: 10000
+  category: cargoproduct-category-name-livestock
+  group: market

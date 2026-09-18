@@ -198,7 +198,7 @@
   parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpsuitOutpostTypanDirectory
   name: парадная форма директора исследований синдиката
-  description: Роскошная униформа директора исследований, для особых случаев.
+  description: Роскошная униформа Представителя Горизонта, для особых случаев.
   components:
   - type: Clothing
     sprite: _Lua/Clothing/Uniforms/directory.rsi
@@ -219,7 +219,7 @@
 - type: entity
   parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformScienceRDOutpostTypan
-  name: униформа директора исследований
+  name: униформа Представителя Горизонта
   description: Слегка выцветшая от химикатов униформа.
   components:
   - type: Clothing

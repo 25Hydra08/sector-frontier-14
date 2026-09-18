@@ -18,7 +18,7 @@ lua-test-title = Тест
 lua-test-description = Лёгкий пресет для интеграционных и локальных тестов. Без POI и bluespace-событий.
 currency = Кредиты
 shipyard-rules-default1 =
-    Благодарим Вас за присоединение к СРБС.
+    Благодарим Вас за присоединение к Frontline Solutions.
     Покупая шаттл, вы соглашаетесь со всеми
     положениями должностных инструкций.
 shipyard-rules-default2 =

@@ -105,7 +105,7 @@
   id: SpawnPointCompanySecurity
   parent: SpawnPointCompanyBase
   name: точка спавна фракции
-  suffix: СРБС
+  suffix: Frontline Solutions
   categories: [ Security ]
   components:
   - type: SpawnPoint

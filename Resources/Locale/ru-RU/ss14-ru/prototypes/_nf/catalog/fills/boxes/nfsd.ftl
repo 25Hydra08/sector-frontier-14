@@ -1,5 +1,5 @@
-ent-BoxBundleNfsd = коробка с предметами СРБС
-    .desc = Коробка, полная предметов СРБС.
+ent-BoxBundleNfsd = коробка с предметами Frontline Solutions
+    .desc = Коробка, полная предметов Frontline Solutions.
 ent-BoxExplosiveGrenades = коробка разнывных гранат
     .desc = Коробка, полная разнывных гранат.
 ent-BoxIncendiaryGrenades = коробка зажигательных гранат

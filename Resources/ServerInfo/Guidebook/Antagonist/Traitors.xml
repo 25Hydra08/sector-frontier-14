@@ -86,7 +86,7 @@
     <GuideEntityEmbed Entity="Hypospray" Caption=""/>
     <GuideEntityEmbed Entity="HandheldCrewMonitorEmpty" Caption=""/>
   </Box>
-  - Кражу [bold]экспериментального скафандра[/bold] или [bold]ручного телепортера[/bold] [color=#c96dbf]Директора исследований[/color].
+  - Кражу [bold]экспериментального скафандра[/bold] или [bold]ручного телепортера[/bold] [color=#c96dbf]Представителя Горизонта[/color].
   <Box>
     <GuideEntityEmbed Entity="ClothingOuterHardsuitRd" Caption=""/>
     <GuideEntityEmbed Entity="HandTeleporter" Caption=""/>

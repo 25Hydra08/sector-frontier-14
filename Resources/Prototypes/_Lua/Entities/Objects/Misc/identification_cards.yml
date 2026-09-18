@@ -610,7 +610,7 @@
 - type: entity
   parent: IDCardStandard
   id: FrontierEngineerIDCard
-  name: ID карта Инженера ЭИК
+  name: ID карта Инженера исследовательского судна Горизонт
   components:
   - type: Sprite
     layers:

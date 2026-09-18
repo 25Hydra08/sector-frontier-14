@@ -1,12 +1,12 @@
 ent-DebugThrusterNfsd = { ent-DebugThrusterSecurity }
-    .suffix = ДЕБАГ, СРБС
+    .suffix = ДЕБАГ, Frontline Solutions
     .desc = { ent-DebugThrusterSecurity.desc }
 ent-GyroscopeNfsd = { ent-GyroscopeSecurity }
-    .suffix = СРБС
+    .suffix = Frontline Solutions
     .desc = { ent-GyroscopeSecurity.desc }
 ent-DebugGyroscopeNfsd = { ent-DebugGyroscopeSecurity }
-    .suffix = ДЕБАГ, СРБС
+    .suffix = ДЕБАГ, Frontline Solutions
     .desc = { ent-DebugGyroscopeSecurity.desc }
 ent-SmallGyroscopeNfsd = малый гироскоп
-    .suffix = СРБС
+    .suffix = Frontline Solutions
     .desc = { ent-SmallGyroscopeSecurity.desc }

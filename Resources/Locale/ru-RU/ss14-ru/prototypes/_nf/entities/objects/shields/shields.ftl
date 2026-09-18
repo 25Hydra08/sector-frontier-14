@@ -1,2 +1,2 @@
-ent-EnergyShieldNfsd = энергощит СРБС
+ent-EnergyShieldNfsd = энергощит Frontline Solutions
     .desc = { ent-EnergyShield.desc }

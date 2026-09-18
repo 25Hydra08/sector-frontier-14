@@ -9,7 +9,7 @@ appraisal-label-price = Оценочная стоимость
 
 
 ledger-tab-Frontier = Аванпост Фронтир
-ledger-tab-Nfsd = СРБС
+ledger-tab-Nfsd = Frontline Solutions
 ledger-tab-Medical = Медицинская диспетчерская
 # Fallback, if this displays, something's wrong.
 ledger-tab-Unknown = Неизвестно

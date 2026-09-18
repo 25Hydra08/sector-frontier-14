@@ -1,5 +1,5 @@
 traffic-manager-tablet-window-title = Менеджмент Трафика
-traffic-manager-tablet-heading = Мониторинг трафика станции Фронтир
+traffic-manager-tablet-heading = Мониторинг трафика исследовательского судна Горизонт
 traffic-manager-tablet-button-refresh = Обновить
 
 traffic-manager-tablet-error-unauthorized = Недостаточно прав доступа

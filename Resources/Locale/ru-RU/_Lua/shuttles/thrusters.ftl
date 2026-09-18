@@ -31,19 +31,19 @@ ent-ThrusterLarge = большой ракетный двигатель
     .desc = Массивный двигатель. Собирается на раме 3x3.
 
 ent-ThrusterMediumNfsd = средний ракетный двигатель
-    .suffix = СРБС, 88.1
+    .suffix = Frontline Solutions, 88.1
     .desc = { ent-ThrusterMedium.desc }
 
 ent-ThrusterLargeNfsd = большой ракетный двигатель
-    .suffix = СРБС, 96
+    .suffix = Frontline Solutions, 96
     .desc = { ent-ThrusterLarge.desc }
 
 ent-ThrusterSecurity = ракетный двигатель
-    .suffix = СРБС, 64
+    .suffix = Frontline Solutions, 64
     .desc = { ent-Thruster.desc }
 
 ent-ThrusterNfsd = ракетный двигатель
-    .suffix = СРБС, 64
+    .suffix = Frontline Solutions, 64
     .desc = { ent-Thruster.desc }
 
 ent-ThrusterUSSP = ракетный двигатель
@@ -67,7 +67,7 @@ ent-ThrusterLargeRogue = большой ракетный двигатель
     .desc = Крайне массивный красный двигатель.
 
 ent-ThrusterNfsdStealh = скрытный двигатель
-    .suffix = СРБС, Скрытный, 60
+    .suffix = Frontline Solutions, Скрытный, 60
     .desc = Двигатель с уменьшенным тепловым следом и тягой.
 
 ent-ThrusterRogueStealth = скрытный двигатель

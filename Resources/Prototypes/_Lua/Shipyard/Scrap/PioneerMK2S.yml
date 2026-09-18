@@ -1,0 +1,36 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+# Author: 25Hydra08 (discord)
+
+- type: vessel
+  id: Pioneer-IIS
+  parent: BaseVessel
+  name: Pioneer-IIS
+  description: Восстановленный после серьёзного столкновения с астероидом Пионер-II. Едва проходит по нормам безопасности, но лучше хоть что-то, чем ничего.
+  price: 13900
+  mass: 32
+  category: Micro
+  group: Scrap
+  shuttlePath: /Maps/_Lua/Shuttles/Scrap/Pioneer-IIS.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  - Scrapyard
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Pioneer-IIS
+  mapName: 'Pioneer-IIS'
+  mapPath: /Maps/_Lua/Shuttles/Scrap/Pioneer-IIS.yml
+  minPlayers: 0
+  stations:
+    Pioneer-IIS:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Pioneer-IIS {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

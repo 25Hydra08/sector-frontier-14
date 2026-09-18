@@ -22,7 +22,7 @@
 - type: entity
   id: BoxFolderERCPlanChertalet
   parent: BoxBase
-  name: Папка Директора Исследований
+  name: Папка Представителя Горизонта
   components:
   - type: Sprite
     sprite: Objects/Misc/folders.rsi
@@ -51,7 +51,7 @@
 - type: entity
   id: BoxFolderERCPlanChilipizdriki
   parent: BoxBase
-  name: Папка Директора Исследований
+  name: Папка Представителя Горизонта
   components:
   - type: Sprite
     sprite: Objects/Misc/folders.rsi
@@ -82,7 +82,7 @@
 - type: entity
   id: BoxFolderERCPlanEinsteinIsland
   parent: BoxBase
-  name: Папка Директора Исследований
+  name: Папка Представителя Горизонта
   components:
   - type: Sprite
     sprite: Objects/Misc/folders.rsi

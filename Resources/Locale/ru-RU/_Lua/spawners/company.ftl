@@ -28,7 +28,7 @@ ent-SpawnPointCompanyCentComm = точка спавна фракции
 
 ent-SpawnPointCompanySecurity = точка спавна фракции
     .desc = { ent-SpawnPointCompanyBase.desc }
-    .suffix = СРБС
+    .suffix = Frontline Solutions
 
 ent-SpawnPointCompanyNeutral = точка спавна фракции
     .desc = { ent-SpawnPointCompanyBase.desc }

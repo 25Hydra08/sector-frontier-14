@@ -8,7 +8,7 @@
   parent: BaseVessel
   name: FrameWorker
   description: Небольшой шаттл, часто используемый для недалёкого полёта, или используемый как основу для строительства шаттлов и станций.
-  price: 18814
+  price: 28814
   mass: 507.5
   category: Micro
   group: Shipyard

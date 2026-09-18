@@ -1,3 +1,3 @@
 ent-IntercomNfsd = { ent-IntercomSecurity }
-    .suffix = СРБС
+    .suffix = Frontline Solutions
     .desc = { ent-IntercomSecurity.desc }

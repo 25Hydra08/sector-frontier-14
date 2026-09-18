@@ -30,7 +30,7 @@ PositronicBrain-name = позитронный мозг
 
 EncryptionCommon-name = ключ шифрования общего канала
 
-EncryptionKeyNfsd-name = ключ шифрования СРБС
+EncryptionKeyNfsd-name = ключ шифрования Frontline Solutions
 
 EncryptionKeyFreelance-name = ключ шифрования пустынника
 

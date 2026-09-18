@@ -9447,7 +9447,7 @@ entities:
   - uid: 1321
     components:
     - type: MetaData
-      desc: Я, черт возьми, ненавижу НТ и СРБС. Слышите? НЕНАВИЖУ!!
+      desc: Я, черт возьми, ненавижу НТ и Frontline Solutions. Слышите? НЕНАВИЖУ!!
       name: Фигурка BrigaDW
     - type: Transform
       pos: 0.182055,8.625167

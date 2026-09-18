@@ -1,10 +1,10 @@
 ent-ClothingHeadHelmetHardsuitM82 = шлем бронескафандра M82
-    .desc = Сменная шлемная система большинства скафандров M82. Базовый ПНВ. Также используется СРБС.
+    .desc = Сменная шлемная система большинства скафандров M82. Базовый ПНВ. Также используется Frontline Solutions.
 ent-ClothingHeadHelmetHardsuitM86 = шлем бронескафандра M86
-    .desc = Модификация шлемов серии M82 с ПНВ и усиленными гелевыми слоями. Также используется СРБС.
+    .desc = Модификация шлемов серии M82 с ПНВ и усиленными гелевыми слоями. Также используется Frontline Solutions.
 ent-ClothingHeadHelmetHardsuitM86Mk4 = шлем бронескафандра M86 Mk.4
     .desc = { ent-ClothingHeadHelmetHardsuitM86.desc }
 ent-ClothingHeadHelmetHardsuitNfsdSheriff = шлем тактического костюма TSFMC M92
-    .desc = Бронированный шлем тактического костюма ТСФ. Также используется СРБС.
+    .desc = Бронированный шлем тактического костюма ТСФ. Также используется Frontline Solutions.
 ent-ClothingHeadHelmetHardsuitNfsdExperimental = шлем тактического костюма TSFMC M92-X
-    .desc = Тяжелобронированный шлем для рейдов ТСФ. Также используется СРБС.
+    .desc = Тяжелобронированный шлем для рейдов ТСФ. Также используется Frontline Solutions.

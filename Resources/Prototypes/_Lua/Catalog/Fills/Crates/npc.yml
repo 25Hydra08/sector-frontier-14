@@ -1,0 +1,10 @@
+- type: entity
+  id: CrateNPCMothroachFriendly
+  parent: CrateLivestock
+  name: ящик дружелюбной таракамоли
+  description: Ящик содержащий одну дружелюбную таракамоль. Считает хозяином того, кого почует первым после покупки.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MobMothroachFriendly
+        amount: 1

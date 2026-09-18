@@ -1,4 +1,4 @@
-﻿using Content.Shared.Light.Components;
+using Content.Shared.Light.Components;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.GameTicking.Rules.VariationPass.Components;
@@ -13,7 +13,7 @@ public sealed partial class PoweredLightVariationPassComponent : Component
     ///     Chance that a light will be replaced with a broken variant.
     /// </summary>
     [DataField]
-    public float LightBreakChance = 0.15f;
+    public float LightBreakChance = 0.003f;
 
     /// <summary>
     ///     Chance that a light will be replaced with an aged variant.

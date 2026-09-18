@@ -1,0 +1,35 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+# Author: 25Hydra08 (discord)
+
+- type: vessel
+  id: Pioneer-IIC
+  parent: BaseVessel
+  name: Pioneer-IIC
+  description: Маленький, дешёвый, и удобный шаттл с многолетней историей. Легенда в новом экспортном корпусе для гражданского рынка.
+  price: 23000
+  mass: 32
+  category: Micro
+  group: ASBlackMarket
+  shuttlePath: /Maps/_Lua/Shuttles/BlackMarket/Pioneer-IIC.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Pioneer-IIC
+  mapName: 'Pioneer-IIC'
+  mapPath: /Maps/_Lua/Shuttles/BlackMarket/Pioneer-IIC.yml
+  minPlayers: 0
+  stations:
+    Pioneer-IIC:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Pioneer-IIC {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

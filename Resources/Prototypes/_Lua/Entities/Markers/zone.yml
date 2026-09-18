@@ -4,7 +4,7 @@
 
 - type: entity
   id: FrontierZone300
-  name: Зона станции Фронтир
+  name: Зона исследовательского судна Горизонт
   description: Создает зону в N радиусе
   suffix: 300 Метров
   parent: MarkerBase

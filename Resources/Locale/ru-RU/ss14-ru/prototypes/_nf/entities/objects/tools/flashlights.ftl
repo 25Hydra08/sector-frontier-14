@@ -1,2 +1,2 @@
-ent-FlashlightNfsdLite = фонарик СРБС
-    .desc = Робастный фонарик, используемый сотрудниками СРБС.
+ent-FlashlightNfsdLite = фонарик Frontline Solutions
+    .desc = Робастный фонарик, используемый сотрудниками Frontline Solutions.

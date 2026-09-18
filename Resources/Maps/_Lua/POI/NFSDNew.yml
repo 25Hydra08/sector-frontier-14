@@ -73,7 +73,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: Аванпост СРБС
+      name: Аванпост Frontline Solutionstline Solutions
     - type: Transform
       pos: -0.8515625,-0.88671875
       parent: invalid
@@ -6594,7 +6594,7 @@ entities:
       pos: -50.5,10.5
       parent: 1
     - type: Docking
-      name: СРБС 1
+      name: Frontline Solutionstline Solutions 1
   - uid: 74
     components:
     - type: Transform
@@ -6608,7 +6608,7 @@ entities:
       pos: -69.5,10.5
       parent: 1
     - type: Docking
-      name: СРБС 2
+      name: Frontline Solutionstline Solutions 2
   - uid: 76
     components:
     - type: Transform
@@ -6634,7 +6634,7 @@ entities:
       pos: -74.5,5.5
       parent: 1
     - type: Docking
-      name: СРБС 3
+      name: Frontline Solutionstline Solutions 3
   - uid: 80
     components:
     - type: Transform
@@ -6648,7 +6648,7 @@ entities:
       pos: -74.5,-11.5
       parent: 1
     - type: Docking
-      name: СРБС 4
+      name: Frontline Solutionstline Solutions 4
   - uid: 82
     components:
     - type: Transform
@@ -6668,7 +6668,7 @@ entities:
       pos: 50.5,5.5
       parent: 1
     - type: Docking
-      name: СРБС 9
+      name: Frontline Solutionstline Solutions 9
   - uid: 85
     components:
     - type: Transform
@@ -6682,7 +6682,7 @@ entities:
       pos: 50.5,-11.5
       parent: 1
     - type: Docking
-      name: СРБС 8
+      name: Frontline Solutionstline Solutions 8
   - uid: 87
     components:
     - type: Transform
@@ -6714,7 +6714,7 @@ entities:
       pos: 45.5,10.5
       parent: 1
     - type: Docking
-      name: СРБС 10
+      name: Frontline Solutionstline Solutions 10
   - uid: 92
     components:
     - type: Transform
@@ -6728,7 +6728,7 @@ entities:
       pos: 26.5,10.5
       parent: 1
     - type: Docking
-      name: СРБС 11
+      name: Frontline Solutionstline Solutions 11
   - uid: 94
     components:
     - type: Transform
@@ -6795,7 +6795,7 @@ entities:
       pos: 51.5,-37.5
       parent: 1
     - type: Docking
-      name: СРБС 7
+      name: Frontline Solutionstline Solutions 7
   - uid: 105
     components:
     - type: Transform
@@ -6824,14 +6824,14 @@ entities:
       pos: 45.5,-43.5
       parent: 1
     - type: Docking
-      name: СРБС 6
+      name: Frontline Solutionstline Solutions 6
   - uid: 110
     components:
     - type: Transform
       pos: 25.5,-43.5
       parent: 1
     - type: Docking
-      name: СРБС 5
+      name: Frontline Solutionstline Solutions 5
   - uid: 111
     components:
     - type: Transform
@@ -47278,7 +47278,7 @@ entities:
       pos: 14.5,-12.5
       parent: 1
     - type: FaxMachine
-      name: Аванпост СРБС - ПЮД
+      name: Аванпост Frontline Solutionstline Solutions - ПЮД
   - uid: 7621
     components:
     - type: Transform
@@ -47292,15 +47292,15 @@ entities:
       pos: -13.5,6.5
       parent: 1
     - type: FaxMachine
-      name: Аванпост СРБС - кабинет Смотрителя
-      destinationAddress: Аванпост СРБС - кабинет Смотрителя
+      name: Аванпост Frontline Solutionstline Solutions - кабинет Смотрителя
+      destinationAddress: Аванпост Frontline Solutionstline Solutions - кабинет Смотрителя
   - uid: 7623
     components:
     - type: Transform
       pos: -11.5,-49.5
       parent: 1
     - type: FaxMachine
-      name: Общий факс СРБС
+      name: Общий факс Frontline Solutionstline Solutions
 - proto: filingCabinet
   entities:
   - uid: 7624
@@ -67993,7 +67993,7 @@ entities:
   - uid: 10302
     components:
     - type: MetaData
-      name: Аванпост СРБС
+      name: Аванпост Frontline Solutionstline Solutions
     - type: Transform
       pos: -17.5,4.5
       parent: 1

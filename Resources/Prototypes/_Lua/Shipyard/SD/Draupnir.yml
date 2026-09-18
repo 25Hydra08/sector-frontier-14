@@ -6,7 +6,7 @@
   parent: BaseVessel
   id: Draupnir
   name: Draupnir
-  description: Медицинский корабль СРБС
+  description: Медицинский корабль Frontline Solutions
   limit: 2
   price: 173000 #100000
   mass: 174.5

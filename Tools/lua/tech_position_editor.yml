@@ -87,7 +87,7 @@ profiles:
       - Resources/Prototypes/_Lua/Research/industrial.yml
       - Resources/Prototypes/_Lua/Research/discipline_placeholders.yml
   - id: security
-    name: СРБС
+    name: Frontline Solutions
     faction: Security
     paths:
       - Resources/Prototypes/_Lua/Research/engineering.yml

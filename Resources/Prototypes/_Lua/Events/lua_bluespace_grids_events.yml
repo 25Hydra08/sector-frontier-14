@@ -54,13 +54,13 @@
     endAnnouncement: station-event-bluespace-cache-end-announcement
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_cache_leave.ogg
-    earliestStart: 100
+    earliestStart: 200 #100>200
     weight: 5
     duration: 1350
     maxDuration: 1560
-    reoccurrenceDelay: 360 # 6 hours
-    requiredJobs:
-      Sheriff: 1
+    reoccurrenceDelay: 1440 # 24 hours 360>1440
+    # requiredJobs:
+    #   Sheriff: 1
   - type: BluespaceErrorRule
     sectorStarmap: AsteroidSectorDefault
     groups:
@@ -101,9 +101,9 @@
     weight: 3
     duration: 2100
     maxDuration: 2400
-    reoccurrenceDelay: 240 # once per 4 hours
-    requiredJobs:
-      Sheriff: 1
+    reoccurrenceDelay: 960 # once per 16 hours 240>960
+    # requiredJobs:
+    #   Sheriff: 1
   - type: BluespaceErrorRule
     sectorStarmap: AsteroidSectorDefault
     groups:
@@ -137,15 +137,13 @@
     warningAnnouncement: station-event-bluespace-BluespaceBarkhan-8Tranzit-warning-announcement
     endAnnouncement: station-event-bluespace-BluespaceBarkhan-8Tranzit-end-announcement
     earliestStart: 2880
-    minimumPlayers: 40
+    minimumPlayers: 10
     weight: 3
     duration: 3800
     maxDuration: 4000
     reoccurrenceDelay: 1920 # once per 48 hours
     requiredJobs:
       Paramedic: 1
-      Brigmedic: 1
-      Chemist: 1
   - type: BluespaceErrorRule
     sectorStarmap: AsteroidSectorDefault
     groups:

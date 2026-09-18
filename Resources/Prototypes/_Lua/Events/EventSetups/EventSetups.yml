@@ -1,0 +1,384 @@
+# #region БАЗА
+# - type: startingGear
+#   id: SETUP-Event-
+#   equipment:
+#     eyes:
+#     head:
+#     ears:
+#     neck:
+#     mask:
+#     jumpsuit:
+#     outerClothing:
+#     gloves:
+#     shoes:
+#     pocket1:
+#     pocket2:
+#     id:
+#     back:
+#     belt:
+#     suitstorage:
+#   storage:
+#     back:
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#     -
+#   inhand:
+#   - DnaScramblerImplanter
+
+# - type: entity
+#   save: false
+#   parent: BaseMobHuman
+#   id: MobHuman
+#   name: Неизвестный
+#   suffix: "Ивент-урист, ""
+#   components:
+#   - type: Loadout
+#     prototypes:
+#     - AIPsychoPoorGear
+
+#region Парамедик
+- type: startingGear
+  id: SETUP-Event-Paramedic
+  equipment:
+    head: ClothingHeadHatParamedicsoft
+    jumpsuit: ClothingUniformJumpsuitParamedic
+    back: ClothingBackpackMilitarySatchel
+    mask: ClothingMaskBreathMedicalSecurity
+    eyes: ClothingEyesHudMedical
+    ears: ClothingHeadsetMedical
+    gloves: ClothingHandsGlovesCombatWhite
+    outerClothing: ClothingOuterHardsuitVoidParamed
+    shoes: ClothingShoesBootsJetBoots
+    id: ParamedicPDA
+    pocket1: MedicalPouchFilledERT
+    pocket2: DoubleEmergencyOxygenTankFilled
+    suitstorage: WeaponSubMachineGunDrozd
+    belt: ClothingBeltMedicalEMT
+  storage:
+    back:
+    - JawsOfLife
+    - Magazine45_ACPSubMachineGunFMJ
+    - Magazine45_ACPSubMachineGunFMJ
+    - Magazine45_ACPSubMachineGunFMJ
+    - PowerCellMicroreactor
+    - PowerCellMicroreactor
+    - PowerCellMicroreactor
+    - JetInjector
+    - MedkitAdvancedFilled
+    - MedkitAdvancedFilled
+    - WeaponGrapplingGun
+    - ImprovedMedicatedSuture
+    - RemoteSignallerAdvanced
+    - DefibrillatorCompact
+    - OmnimedTool
+    - RegenerativeFireMesh
+    - OligomersMedicalVialBluespace
+    - HandheldCrewMonitorEmpty
+    - HandHeldMassScannerEmpty
+  inhand:
+  - DnaScramblerImplanter
+
+- type: entity
+  save: false
+  parent: BaseMobHuman
+  id: MobHuman-SETUP-Event-Paramedic
+  name: Неизвестный
+  suffix: "Ивент-урист, парамедик"
+  components:
+  - type: Loadout
+    prototypes:
+    - SETUP-Event-Paramedic
+
+#region Парамед синди
+- type: startingGear
+  id: SETUP-Event-SyndicateParamedic
+  equipment:
+    eyes: ClothingEyesHudSyndicateAgentOutpostTypan
+    head: ClothingHeadHatBeret
+    ears: ClothingHeadsetAltOutpostTypan
+    mask: ClothingMaskGasSyndicate
+    jumpsuit: ClothingUniformJumpsuitParamedicSyndie
+    outerClothing: ClothingOuterHardsuitSyndieMedic
+    gloves: ClothingHandsGlovesCombatWhite
+    shoes: ADTClothingShoesBootsMagAdvSynd
+    pocket1: MedicalPouchFilledERT
+    pocket2: DoubleEmergencyOxygenTankFilled
+    id: MedicalPDASyndi
+    back: ClothingBackpackMilitarySatchel
+    belt: ClothingBeltMilitaryWebbingMed
+    suitstorage: WeaponShotgunBulldog
+  storage:
+    back:
+    - SyndicateJawsOfLife
+    - PowerCellMicroreactor
+    - PowerCellMicroreactor
+    - PowerCellMicroreactor
+    - WeaponGrapplingGun
+    - HandheldCrewMonitorEmpty
+    - HandHeldMassScannerEmpty
+    - WeaponEnergyRevolver
+    - HyperzineMedicalVialBluespace
+    - ImprovedMedicatedSuture
+    - RegenerativeFireMesh
+    - OmnimedToolSyndie
+    - DefibrillatorSyndicate
+    - AdvancedJetInjectorSC
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+    - Magazine12_gaugeBuckshot
+  inhand:
+  - DnaScramblerImplanter
+
+- type: entity
+  save: false
+  parent: BaseMobHuman
+  id: MobHuman-SETUP-Event-SyndicateParamedic
+  name: Неизвестный
+  suffix: "Ивент-урист, синди-парамедик"
+  components:
+  - type: Loadout
+    prototypes:
+    - SETUP-Event-SyndicateParamedic
+
+#region МеркГостАрена1
+- type: startingGear
+  id: SETUP-Event-MercenaryGhostArena1
+  equipment:
+    eyes: ClothingEyesThermalVisionGoggles
+    head: ClothingHeadHelmetSwat
+    ears: ClothingHeadsetAltMercenaryCommon
+    mask: ClothingMaskGasMercenary
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    outerClothing: ClothingOuterHardsuitMercenary
+    gloves: ClothingHandsMercenaryGlovesCombat
+    shoes: ClothingShoesBootsSpetsnaz
+    pocket1: MedkitCombatFilled
+    pocket2: DoubleEmergencyOxygenTankFilled
+    id: MercenaryPDA
+    back: ClothingBackpackMilitarySatchel
+    belt: ClothingBeltMilitaryWebbing
+    suitstorage: JetpackBlackFilled
+  storage:
+    back:
+    - MedipenCaseMechFilled
+    - MedipenCaseStimFilled
+    - MedipenCasePhysFilled
+    - OmnimedTool
+    - HandheldCrewMonitorEmpty
+    - HandheldCrewMonitorEmpty
+    - WeaponGrapplingGun
+    - JawsOfLife
+    - CombatMedipen
+    - CombatMedipen
+    - ClothingOuterVestWeb
+    - PowerCellMicroreactor
+    - PowerCellMicroreactor
+    - Handcuffs
+    - WeaponShotgunEnforcer
+    - AmmoBox12_gaugeBuckshot
+  inhand:
+  - DnaScramblerImplanter
+
+- type: entity
+  save: false
+  parent: BaseMobHuman
+  id: MobHuman-SETUP-Event-MercenaryGhostArena1
+  name: Неизвестный
+  suffix: "Ивент-урист, мерк-арена1"
+  components:
+  - type: Loadout
+    prototypes:
+    - SETUP-Event-MercenaryGhostArena1
+
+#region МеркГостАрена2
+- type: startingGear
+  id: SETUP-Event-MercenaryGhostArena2
+  equipment:
+    eyes: ClothingEyesThermalVisionGoggles
+    head: ClothingHeadHelmetSwat
+    ears: ClothingHeadsetAltMercenaryCommon
+    mask: ClothingMaskGasMercenary
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    outerClothing: ClothingOuterHardsuitMercenary
+    gloves: ClothingHandsMercenaryGlovesCombat
+    shoes: ClothingShoesBootsSpetsnaz
+    pocket1: MedkitCombatFilled
+    pocket2: DoubleEmergencyOxygenTankFilled
+    id: MercenaryPDA
+    back: ClothingBackpackMilitarySatchel
+    belt: ClothingBeltMilitaryWebbing
+    suitstorage: JetpackBlackFilled
+  storage:
+    back:
+    - MedipenCaseMechFilled
+    - MedipenCaseStimFilled
+    - MedipenCasePhysFilled
+    - OmnimedTool
+    - HandheldCrewMonitorEmpty
+    - HandheldCrewMonitorEmpty
+    - WeaponGrapplingGun
+    - JawsOfLife
+    - CombatMedipen
+    - CombatMedipen
+    - ClothingOuterVestWeb
+    - PowerCellMicroreactor
+    - PowerCellMicroreactor
+    - Handcuffs
+    - WeaponRifleLecter
+    - Magazine68x52mmCaseless
+    - Magazine68x52mmCaseless
+    - Magazine68x52mmCaseless
+    - Magazine68x52mmCaseless
+    - Magazine68x52mmCaseless
+    - Magazine68x52mmCaseless
+    - Magazine68x52mmCaseless
+    - Magazine68x52mmCaseless
+    - Magazine68x52mmCaseless
+  inhand:
+  - DnaScramblerImplanter
+
+- type: entity
+  save: false
+  parent: BaseMobHuman
+  id: MobHuman-SETUP-Event-MercenaryGhostArena2
+  name: Неизвестный
+  suffix: "Ивент-урист, мерк-арена2"
+  components:
+  - type: Loadout
+    prototypes:
+    - SETUP-Event-MercenaryGhostArena2
+
+#region Пират
+- type: startingGear
+  id: SETUP-Event-Pirate
+  equipment:
+    eyes: ClothingEyesGlassesMeson
+    head: ClothingHeadBandBlack
+    ears: ClothingHeadsetGrey
+    mask: ClothingMaskGas
+    jumpsuit: ClothingUniformJumpsuitPirate
+    outerClothing: ClothingOuterHardsuitPirateCap
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsMagPirateFilled
+    pocket1: MedkitCombatFilled
+    pocket2: DoubleEmergencyOxygenTankFilled
+    id: NFPiratePDA
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltUtilityEngineering
+    suitstorage: JetpackBlackFilled
+  storage:
+    back:
+    - AmmoBox12_gaugeBuckshot
+    - HandheldCrewMonitorEmpty
+    - HandHeldMassScannerEmpty
+    - WeaponShotgunSawn
+    - Handcuffs
+    - Stimpack
+    - Stimpack
+    - ClothingHeadHatPirateTricord
+    - PowerCellMicroreactor
+    - ClothingOuterVestWeb
+    - WeaponRevolverPirate
+    - CombatMedipen
+    - SpeedLoader357_magnumFMJ
+    - SpeedLoader357_magnumFMJ
+  inhand:
+  - DnaScramblerImplanter
+
+- type: entity
+  save: false
+  parent: BaseMobHuman
+  id: MobHuman-SETUP-Event-Pirate
+  name: Неизвестный
+  suffix: "Ивент-урист, пират"
+  components:
+  - type: Loadout
+    prototypes:
+    - SETUP-Event-Pirate
+
+#region РХБЗЗ
+- type: startingGear
+  id: SETUP-Event-CBURN
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetAltCentCom
+    mask: ClothingMaskGasERT
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    outerClothing: ClothingOuterHardsuitCBURN
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsCombatFilled
+    pocket1: AdvancedJetInjector
+    pocket2: MedicalPouchFilledERT
+    id: CBURNPDA
+    back: ClothingBackpackMilitarySatchel
+    belt: ClothingBeltMilitaryWebbing
+    suitstorage: JetpackVoidFilled
+  storage:
+    back:
+    - WeaponShotgunEnforcer
+    - GrenadeIncendiaryNfsd
+    - AmmoBox12_gaugeIncendiary
+    - MindShieldImplanter
+    - DnaScramblerImplanter
+    - WeaponRevolverInspector
+    - HandHeldMassScannerEmpty
+    - HandheldCrewMonitorEmpty
+    - PowerCellMicroreactor
+    - PowerCellMicroreactor
+    - PowerCellMicroreactor
+    - RegenerativeMesh
+    - MedicatedSuture
+    - SpeedLoader357_magnumIncendiary
+    - DefibrillatorCompact
+    - VialBluespaceSporeCure
+    - JawsOfLife
+    - WeaponSprayNozzle
+  inhand:
+  - ClothingBackpackWaterTankFungicide
+
+- type: entity
+  save: false
+  parent: BaseMobHuman
+  id: MobHuman-SETUP-Event-CBURN
+  name: Неизвестный
+  suffix: "Ивент-урист, рхбзз"
+  components:
+  - type: Loadout
+    prototypes:
+    - SETUP-Event-CBURN

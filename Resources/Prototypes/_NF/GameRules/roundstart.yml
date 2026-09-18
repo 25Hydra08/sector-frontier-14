@@ -146,7 +146,7 @@
   components:
   - type: RoundstartStationVariationRule
     rules:
-    - id: NFBasicPoweredLightVariationPass
+    # - id: NFBasicPoweredLightVariationPass
     - id: NFBasicTrashVariationPass
     - id: NFBasicPuddleMessVariationPass
     # - id: NFBasicDeadDropHintVariationPass # ccvar for it found at smuggling.min_hints/smuggling.max_hints

@@ -218,7 +218,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Аванпост СРБС - ПЮД"
+    name: "Аванпост Frontline Solutions - ПЮД"
 
 - type: entity
   parent: FaxMachineBase

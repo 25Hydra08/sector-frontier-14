@@ -18,3 +18,138 @@
         messages: [ "ibuprofen-effect-painkill" ]
         probability: 0.2
   pricePerUnit: 0
+
+#region Т2 химия
+#тут будет т2 и т3 химия в будущем, сейчас скопирован плейсолдер на будущее.
+
+# #Lua negative effects start
+#       - !type:Emote
+#         conditions:
+#         - !type:ReagentThreshold
+#           min: 4
+#         emote: Yawn
+#         showInChat: true
+#         probability: 0.1
+#       - !type:MovespeedModifier
+#         conditions:
+#         - !type:ReagentThreshold
+#           min: 7
+#         walkSpeedModifier: 0.75
+#         sprintSpeedModifier: 0.75
+#       - !type:ModifyStatusEffect
+#         conditions:
+#         - !type:ReagentThreshold
+#           min: 12
+#         effectProto: StatusEffectDrowsiness
+#         time: 4
+#         type: Add
+#         refresh: false
+# #Lua negative effects end
+
+# - type: reagent
+#   id: PyrazineT2
+#   name: reagent-name-pyrazine-T2
+#   group: Medicine
+#   desc: reagent-desc-pyrazine-T2
+#   physicalDesc: reagent-physical-desc-thick
+#   flavor: syrupy
+#   color: "#cf5107"
+#   metabolisms:
+#     Medicine:
+#       metabolismRate: 0.3
+#       effects:
+#       - !type:HealthChange
+#         damage:
+#           types:
+#             Heat: -1.5
+#       - !type:HealthChange
+#         conditions:
+#         - !type:ReagentThreshold
+#           min: 20
+#         damage:
+#           types:
+#             Slash: 0.5
+#             Piercing: 0.5
+#       - !type:ChemVomit
+#         conditions:
+#         - !type:ReagentThreshold
+#           min: 15
+#         probability: 0.1
+#       - !type:Emote
+#         conditions:
+#         - !type:ReagentThreshold
+#           min: 20
+#         emote: Scream
+#         probability: 0.2
+
+# - type: reagent
+#   id: BruizineT2
+#   name: reagent-name-bruizine
+#   group: Medicine
+#   desc: reagent-desc-bruizine
+#   physicalDesc: reagent-physical-desc-mucus-like
+#   flavor: sour
+#   color: "#ff3636"
+#   metabolisms:
+#     Medicine:
+#       metabolismRate: 0.25
+#       effects:
+#       - !type:HealthChange
+#         damage:
+#           types:
+#             Blunt: -2.25 # 9 per u
+#       - !type:SatiateHunger
+#         factor: -1
+#       - !type:HealthChange
+#         conditions:
+#         - !type:ReagentThreshold
+#           min: 10.5
+#         damage:
+#           types:
+#             Poison: 2.5 # 10 per u
+#   pricePerUnit: 0
+
+# - type: reagent
+#   id: PuncturaseT2
+#   name: reagent-name-puncturase
+#   group: Medicine
+#   desc: reagent-desc-puncturase
+#   physicalDesc: reagent-physical-desc-fizzy
+#   flavor: fizzy
+#   color: "#b9bf93"
+#   metabolisms:
+#     Medicine:
+#       metabolismRate: 0.25
+#       effects:
+#       - !type:HealthChange
+#         damage:
+#           types:
+#             Piercing: -2.5 # 10 per u
+#             Radiation: 0.05 # 0.2 per u, 3 for 15u
+#       - !type:HealthChange
+#         conditions:
+#         - !type:ReagentThreshold
+#           min: 12
+#         damage:
+#           types:
+#             Blunt: 3 # 12 per u
+#   pricePerUnit: 0
+
+# - type: reagent
+#   id: OmnizineT2
+#   name: reagent-name-omnizine
+#   group: Medicine
+#   desc: reagent-desc-omnizine
+#   physicalDesc: reagent-physical-desc-soothing
+#   flavor: medicine
+#   color: "#fcf7f9"
+#   metabolisms:
+#     Medicine:
+#       effects:
+#       - !type:EvenHealthChange
+#         damage:
+#           Burn: -0.5
+#           Toxin: -3
+#           Airloss: -1.5
+#           Brute: -0.5
+#   pricePerUnit: 0

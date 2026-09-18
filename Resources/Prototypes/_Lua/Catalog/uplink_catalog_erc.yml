@@ -729,7 +729,7 @@
 
 # Uplink console
 - type: entity
-  name: стационарный аплинк ЭИК
+  name: стационарный аплинк исследовательского судна Горизонт
   parent: [BaseStructureDisableToolUse, ComputerUplinkBase, StorePresetERCUplink, BaseStructureIndestructible, BaseStructureComputer]
   id: LuaComputerUplinkERC
   description: Чтобы выжить в мире хищников, нужно иметь зубы.

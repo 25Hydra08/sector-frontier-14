@@ -104,3 +104,39 @@
   - type: StaticPrice
     price: 0
     vendPrice: 5000
+
+
+#region рхбзз
+- type: entity
+  suffix: "противоспоровое лекарство"
+  parent: VialBluespace
+  id: VialBluespaceSporeCure
+  components:
+  - type: Label
+    currentLabel: "противоспоровое лекарство, колоть по 30u"
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+        - ReagentId: Antibiotic
+          Quantity: 100
+        - ReagentId: Hexabione
+          Quantity: 100
+        - ReagentId: CrimsonFungicide
+          Quantity: 100
+
+- type: entity
+  suffix: "Фунгицид"
+  parent: ClothingBackpackWaterTank
+  id: ClothingBackpackWaterTankFungicide
+  components:
+  - type: Label
+    currentLabel: "Фунгицид"
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 1000
+        reagents:
+        - ReagentId: CrimsonFungicide
+          Quantity: 1000

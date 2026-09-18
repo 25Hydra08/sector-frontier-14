@@ -70,11 +70,11 @@
   ## Выплаты за станции
 
   <Box>
-    <GuideEntityEmbed Entity="NfsdSectorPayoutCollector" Caption="СРБС"/>
+    <GuideEntityEmbed Entity="NfsdSectorPayoutCollector" Caption="Frontline Solutions"/>
     <GuideEntityEmbed Entity="SyndicateSectorPayoutCollector" Caption="Синдикат"/>
     <GuideEntityEmbed Entity="PirateSectorPayoutCollector" Caption="Пираты"/>
   </Box>
-  - [color=#009954][bold]СРБС[/bold][/color] — Таможенные кредиты
+  - [color=#009954][bold]Frontline Solutions[/bold][/color] — Таможенные кредиты
   <Box>
     <GuideEntityEmbed Entity="FrontierUplinkCoin" Caption="Таможенные кредиты"/>
   </Box>

@@ -516,7 +516,7 @@
 - type: entity
   parent: BasePDA
   id: FrontierEngineerPDA
-  name: КПК Инженера ЭИК
+  name: КПК Инженера исследовательского судна Горизонт
   description: Rugged and well-worn.
   components:
   - type: Pda
