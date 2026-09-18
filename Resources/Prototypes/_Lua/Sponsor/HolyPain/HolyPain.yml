@@ -103,6 +103,12 @@
     clothingPrototype: HolyPainRankKitHardsuit
     requiredSlot: BACK
     slot: outerClothing
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container {}
+      cell_slot: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
 
 #region Доспех
 - type: entity
