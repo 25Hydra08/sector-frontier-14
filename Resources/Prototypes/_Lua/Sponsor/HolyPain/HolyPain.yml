@@ -106,7 +106,7 @@
 
 #region Доспех
 - type: entity
-  parent: [ ClothingOuterBase, GeigerCounterClothing ]
+  parent: [ ClothingOuterHardsuitAtmos, HardsuitSpeedBuff ]
   id: HolyPainRankKitHardsuit
   name: доспех HolyPain
   description: Адский кузнец, по горло набитый чужими дугами, без устали бьёт молотом под непрестанные вопли слабых. Вопросы морали и судьбы его не интересуют. Совестью пусть мучаются те, кому больше нечем заняться.
@@ -115,76 +115,47 @@
     sprite: _Lua/Sponsor/HolyPain/HolyPainRIG.rsi
   - type: Clothing
     sprite: _Lua/Sponsor/HolyPain/HolyPainRIG.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.02
-    lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.001
-    coolingCoefficient: 0.001
-  - type: StaminaResistance
-    damageCoefficient: 0.55
+  - type: ToggleableClothing
+    requiredSlot: outerclothing
+    blockUnequipWhenAttached: false
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: HolyPainRankKitHardsuitHelmet
+      helmetcover: ClothingHeadHelmetCoverBlock
+      helmetattachment: ClothingHeadHelmetAttachmentBlock
   - type: Item
     size: Huge
-  - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
-  - type: Insulated
-  - type: ToggleableClothing
-    clothingPrototype: HolyPainRankKitHardsuitHelmet
-    slot: head
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.55
-        Slash: 0.55
-        Piercing: 0.55
-        Heat: 0.45
-        Radiation: 0.20
-        Caustic: 0.20
-        Shock: 0.55
-  - type: ExplosionResistance
-    damageCoefficient: 0.2
-  - type: DiseaseProtection
-    protection: 0.8
-  - type: GroupExamine
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
+        Heat: 0.3
+        Radiation: 0.1
+        Caustic: 0.45
+        Poison: 0.4
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
   - type: Tag
-    tags:
-    - Hardsuit
-    - WhitelistChameleon
-  - type: HideLayerClothing
-    slots:
-    - Tail
-    hideOnToggle: true
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10
-    slots: OUTERCLOTHING
-  - type: HarpyHideWings
-#shield start
-  - type: PersonalShield
-    shield:
-      maxCharge: 300
-      regenRate: 3
-      spinupTime: 1
-      breakCooldown: 15
-      powerDraw: 0.5
-    color: "#0026b1"
-    scale: 2.1
-    breathDepth: 0.1
-  - type: ActionGrant
-    actions:
-    - ActionActivatePersonalShield
-  - type: ItemActionGrant
-    actions:
-    - ActionActivatePersonalShield
-  - type: Battery
-    maxCharge: 300
-    startingCharge: 300
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: 25
-#shield end
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+      storagebase: !type:Container
+        ents: []
+        showEnts: false
+        occludes: true
+      cell_slot: !type:ContainerSlot
+        showEnts: false
+        occludes: true
+      beakerSlot: !type:ContainerSlot # imperial hardsuit injection
 
 #region Шлем
 - type: entity
@@ -779,8 +750,8 @@
     radarBlip: true
   - type: Appearance
   - type: ClothingSpeedModifier
-    walkModifier: 1.1
-    sprintModifier: 1.1
+    walkModifier: 1
+    sprintModifier: 1
 #фикс бага с отображением балона
   - type: Item
     size: Normal

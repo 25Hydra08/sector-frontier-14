@@ -60,7 +60,7 @@
 - type: entity
   parent: [ClothingOuterStorageBase, BaseC1SyndicateContrabandNoValue]
   id: ClothingOuterCoatRDOutpostTypan
-  name: лабораторный халат Представителя Горизонта
+  name: лабораторный халат Директора Исследований Синдиката
   description: Яркий лабораторный халат, предоставляющий защиту от окружающей среды.
   components:
   - type: Clothing

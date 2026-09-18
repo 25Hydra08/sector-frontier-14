@@ -5,7 +5,7 @@
 - type: entity
   parent: [ClothingHandsGlovesSyntheticBase, BaseC1SyndicateContrabandNoValue]
   id: ClothingHandsRDOutpostTypan
-  name: перчатки Представителя Горизонта
+  name: перчатки Директора Исследований Синдиката
   description: Тактические перчатки, защищающие его обладателя от нежелательных соприкосновений.
   components:
   - type: Fiber
