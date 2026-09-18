@@ -8,7 +8,7 @@
   parent: BaseVessel
   name: Pioneer-IIS
   description: Восстановленный после серьёзного столкновения с астероидом Пионер-II. Едва проходит по нормам безопасности, но лучше хоть что-то, чем ничего.
-  price: 13985
+  price: 14500
   mass: 32
   category: Micro
   group: Scrap
