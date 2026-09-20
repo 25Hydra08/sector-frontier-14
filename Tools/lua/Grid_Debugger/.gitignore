@@ -1,0 +1,6 @@
+# Grid_Debugger local artifacts
+dist/
+dist_win/
+*.log
+src/**/bin/
+src/**/obj/

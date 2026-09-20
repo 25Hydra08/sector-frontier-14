@@ -9,7 +9,8 @@
   maxRandomOffset: 0
   stations:
     Frontier:
-      stationProto: StandardFrontierStation
+      # stationProto: StandardFrontierStation
+      stationProto: StandardHorizonStation
       # Lua add start
       gridComponents:
       - type: VesselMusic

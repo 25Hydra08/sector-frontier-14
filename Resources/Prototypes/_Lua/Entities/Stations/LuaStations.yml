@@ -1,0 +1,23 @@
+#region Horizon
+- type: entity
+  id: StandardHorizonStation
+  suffix: DEBUG # TODO: Fix this, its here to stop PrototypeSaveTest fail
+  parent:
+  - BaseStation
+  - BaseStationCargoMarket
+  - NFBaseStationCargo
+  - MarketFrontierOutpost
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - BaseStationSiliconLawFrontierStation
+  - BaseStationSectorNews
+  - BaseStationMail # Mail
+  - BaseStationSectorServices # Hosts all sector-wide services
+  - BaseStationDampening
+  - BaseStationDeadDropHintExempt # No hints
+  - BaseStationRenameWarpPoints
+  - BaseStationCentcomm # Lua centcomm
+  - BaseStationEvacuation # Lua bus
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
