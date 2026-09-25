@@ -4,7 +4,7 @@
   name: Gulag
   description: Небольшой бурильный шаттл, использовавшийся ранее для перевоспитания политзаключённых.
   limit: 3
-  price: 102417
+  price: 90417
   mass: 165
   category: Small
   group: Ussp
