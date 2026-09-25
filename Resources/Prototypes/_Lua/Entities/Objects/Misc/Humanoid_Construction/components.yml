@@ -439,11 +439,11 @@
       - !type:EntSelector
         id: HumanoidEndoskeleton
 
-#region Кодекс Бури
+#region Пираты
 - type: entity
-  id: HumanoidEndoskeletonStormCreed
-  name: эндоскелет гуманоида Кодекса Бури
-  description: Готовая рама для сборки вашего личного телохранителя. Установлен модуль контроля сознания Кодекса Бури. Собираемый телохранитель будет атаковать только тех кто не состоит в Кодексе Бури.
+  id: HumanoidEndoskeletonPirate
+  name: эндоскелет гуманоида Пиратов
+  description: Готовая рама для сборки вашего личного телохранителя. Установлен модуль контроля сознания Пиратов. Собираемый телохранитель будет атаковать только тех кто не состоит в пиратской общине.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -495,13 +495,13 @@
   - type: Pullable
 #монтаж и демонтаж
   - type: Construction
-    graph: HumanoidEndoskeletonStormCreedGraph
-    node: HumanoidEndoskeletonStormCreed
+    graph: HumanoidEndoskeletonPirateGraph
+    node: HumanoidEndoskeletonPirate
   - type: Damageable
     damageContainer: StructuralInorganic
   - type: Butcherable
     spawned:
-    - id: HumanoidEndoskeletonStormCreedGib
+    - id: HumanoidEndoskeletonPirateGib
       amount: 1
   - type: Destructible
     thresholds:
@@ -516,17 +516,17 @@
           collection: MetalSlam
       - !type:SpawnEntitiesBehavior
         spawn:
-          HumanoidEndoskeletonStormCreedGib:
+          HumanoidEndoskeletonPirateGib:
             min: 1
             max: 1
   - type: Tag
     tags:
-    - HumanoidEndoskeletonStormCreed
+    - HumanoidEndoskeletonPirate
 
 #спавнер для гиба
 - type: entity
-  name: HumanoidEndoskeletonStormCreedGib
-  id: HumanoidEndoskeletonStormCreedGib
+  name: HumanoidEndoskeletonPirateGib
+  id: HumanoidEndoskeletonPirateGib
   parent: MarkerBase
   categories: [ HideSpawnMenu ]
   components:
@@ -542,7 +542,7 @@
     table: !type:AllSelector
       children:
       - !type:EntSelector
-        id: MindControlModuleStormCreed
+        id: MindControlModulePirate
       - !type:EntSelector
         id: HumanoidEndoskeleton
 
@@ -875,9 +875,9 @@
 #region модуль контроля сознания Бури
 - type: entity
   parent: BaseItem
-  id: MindControlModuleStormCreed
-  name: модуль контроля сознания Кодекса Бури
-  description: Небольшое устройство для контроля сознания гуманоидного существа, собранного на основе эндоскелета. Непригоден для контроля обычных гуманоидов. Содержит ключ Кодекса Бури, транслирует желание убить всех кроме членов Кодекса Бури.
+  id: MindControlModulePirate
+  name: модуль контроля сознания Пиратов
+  description: Небольшое устройство для контроля сознания гуманоидного существа, собранного на основе эндоскелета. Непригоден для контроля обычных гуманоидов. Содержит ключ Пиратов, транслирует желание убить всех кроме членов пиратской общины.
   components:
   - type: Sprite
     layers:
@@ -892,16 +892,16 @@
   - type: Appearance
   - type: Tag
     tags:
-    - MindControlModuleStormCreed
+    - MindControlModulePirate
 #монтаж и демонтаж
   - type: Construction
-    graph: MindControlModuleStormCreedGraph
-    node: MindControlModuleStormCreed
+    graph: MindControlModulePirateGraph
+    node: MindControlModulePirate
   - type: Damageable
     damageContainer: StructuralInorganic
   - type: Butcherable
     spawned:
-    - id: MindControlModuleStormCreedGib
+    - id: MindControlModulePirateGib
       amount: 1
   - type: Destructible
     thresholds:
@@ -916,14 +916,14 @@
           collection: MetalSlam
       - !type:SpawnEntitiesBehavior
         spawn:
-          MindControlModuleStormCreedGib:
+          MindControlModulePirateGib:
             min: 1
             max: 1
 
 #спавнер для гиба
 - type: entity
-  name: MindControlModuleStormCreedGib
-  id: MindControlModuleStormCreedGib
+  name: MindControlModulePirateGib
+  id: MindControlModulePirateGib
   parent: MarkerBase
   categories: [ HideSpawnMenu ]
   components:

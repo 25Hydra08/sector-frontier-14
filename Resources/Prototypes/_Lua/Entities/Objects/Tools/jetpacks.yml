@@ -1,8 +1,8 @@
 - type: entity
   parent: GasTankBase
   id: JetpackStealth
-  name: stealth jetpack
-  description: Slower, invisible to radar.
+  name: стелс-джетпак
+  description: Джетпак с практически неразличимым на радаре следом. Стелс-модификация выпускает при полёте четырёхкратное количество газа, делая след почти чёрным, а поисковый маячок демонтирован.
   components:
   - type: Sprite
     sprite: Objects/Tanks/Jetpacks/black.rsi
@@ -32,10 +32,9 @@
       volume: 5
       temperature: 293.15
   - type: Jetpack
-    moleUsage: 0.00085
-    weightlessModifier: 0.50
-    acceleration: 0.25
-    friction: 0.5
+    acceleration: 1.15
+    weightlessModifier: 2.4
+    moleUsage: 0.0034
     radarBlip: false
     jetpackEffect: JetpackEffectTrailStealth
   - type: Appearance

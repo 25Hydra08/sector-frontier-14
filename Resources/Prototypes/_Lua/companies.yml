@@ -126,7 +126,7 @@
 
 - type: company
   id: Security
-  name: Служба Безопасности
+  name: Frontline Solutions
   iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/nfsd-banner.png
   description: security-description
   motd: security-motd

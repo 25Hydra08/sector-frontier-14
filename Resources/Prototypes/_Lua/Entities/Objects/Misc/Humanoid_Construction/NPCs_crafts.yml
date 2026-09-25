@@ -128,27 +128,27 @@
 
 #строительство
 - type: construction
-  id: MobBodyguardStormCreed
-  graph: MobBodyguardStormCreedGraph
+  id: MobBodyguardPirate
+  graph: MobBodyguardPirateGraph
   startNode: start
-  targetNode: MobBodyguardStormCreed
+  targetNode: MobBodyguardPirate
   category: BioCategory
   objectType: Item
   placementMode: SnapgridCenter
   canBuildInImpassable: false
 
 - type: constructionGraph
-  id: MobBodyguardStormCreedGraph
+  id: MobBodyguardPirateGraph
   start: start
   graph:
   - node: start
     edges:
-    - to: MobBodyguardStormCreed
+    - to: MobBodyguardPirate
       completed:
       - !type:SnapToGrid
       steps:
-      - tag: HumanoidEndoskeletonStormCreed
-        name: HumanoidEndoskeletonStormCreed-name
+      - tag: HumanoidEndoskeletonPirate
+        name: HumanoidEndoskeletonPirate-name
         icon:
           sprite: _NF/Mobs/RogueSilicons/robots.rsi
           state: body_light
@@ -156,8 +156,8 @@
       - material: CrimsonSporeFleshStack
         amount: 5
         doAfter: 10
-  - node: MobBodyguardStormCreed
-    entity: MobBodyguardStormCreed
+  - node: MobBodyguardPirate
+    entity: MobBodyguardPirate
 
 - type: construction
   id: MobBodyguardSyndie

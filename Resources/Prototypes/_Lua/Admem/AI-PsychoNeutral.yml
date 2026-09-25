@@ -1,9 +1,9 @@
 #region Спавнер
 - type: entity
   parent: [ BaseItem ]
-  id: AiTeleportPsychoAdmin
+  id: AiTeleportPsychoNeutralAdmin
   name: телепорт подкреплений ГРЕЙТАЙД
-  suffix: "адмем"
+  suffix: "адмем, нейтральные"
   description: Унивенсальный телепорт для призыва ГРЕЙТАЙДЕРОВ на сервер. "проклятие стало клоунадой и посмешищем" - комментарий 25Hydra08
   components:
   - type: Sprite
@@ -11,7 +11,7 @@
     layers:
     - state: door_remotebase
     - state: door_remotelightscolour
-      color: "#ff00dd"
+      color: "#e088fd"
     - state: door_remotescreencolour
       color: "#9c9c9c"
   - type: Item
@@ -20,7 +20,7 @@
     rechargeCooldown: 1
     rechargeSound: /Audio/Machines/phasein.ogg
   - type: BasicEntityAmmoProvider
-    proto: AIPsychoTeleportSpawner
+    proto: AIPsychoNeutralTeleportSpawner
     capacity: 100
     count: 100
   - type: Gun
@@ -33,8 +33,8 @@
     soundEmpty: /Audio/_NF/Effects/silence.ogg
 
 - type: entity
-  name: AIPsychoTeleportSpawner
-  id: AIPsychoTeleportSpawner
+  name: AIPsychoNeutralTeleportSpawner
+  id: AIPsychoNeutralTeleportSpawner
   parent: MarkerBase
   categories: [ HideSpawnMenu ]
   components:
@@ -44,37 +44,21 @@
     table: !type:AllSelector
       children:
       - !type:EntSelector
-        id: AIPsychoBeacon
+        id: AIPsychoNeutralBeacon
       - !type:EntSelector
-        id: AIPsychoPoorSpawner
+        id: AIPsychoNeutralPoorSpawner
       - !type:EntSelector
-        id: AIPsychoPoorSpawner
+        id: AIPsychoNeutralWelderSpawner
       - !type:EntSelector
-        id: AIPsychoPoorSpawner
+        id: AIPsychoNeutralBreakerSpawner
       - !type:EntSelector
-        id: AIPsychoPoorSpawner
-      - !type:EntSelector
-        id: AIPsychoWelderSpawner
-      - !type:EntSelector
-        id: AIPsychoWelderSpawner
-      - !type:EntSelector
-        id: AIPsychoBreakerSpawner
-      - !type:EntSelector
-        id: AIPsychoBreakerSpawner
-      - !type:EntSelector
-        id: AIPsychoBreakerSpawner
-      - !type:EntSelector
-        id: AIPsychoStunSpawner
-      - !type:EntSelector
-        id: AIPsychoStunSpawner
-      - !type:EntSelector
-        id: AIPsychoStunSpawner
+        id: AIPsychoNeutralStunSpawner
 
 #region БАЗЫ
 
 - type: entity
   parent: BaseMobHuman
-  id: AIPsychoBase
+  id: AIPsychoNeutralBase
   name: AI Псих
   abstract: true
   components:
@@ -93,7 +77,7 @@
     enabled: true
   - type: HTN
     rootTask:
-       task: AIPsychoCompound
+       task: AIPsychoNeutralCompound
     blackboard:
       NavClimb: !type:Bool
         true
@@ -105,11 +89,14 @@
         true
   - type: NpcFactionMember
     factions:
-    - SimpleHostile
+      - Passive
+      - Monkey
+  - type: NPCRetaliation
+    attackMemoryLength: 60
   - type: NPCImprintingOnSpawnBehaviour
     whitelist:
       tags:
-      - AIPsychoBeacon
+      - AIPsychoNeutralBeacon
     follow: true
     spawnFriendsSearchRadius: 5
   - type: Vocalizer
@@ -122,7 +109,7 @@
     lifetime: 7200
 
 - type: htnCompound
-  id: AIPsychoCompound
+  id: AIPsychoNeutralCompound
   branches:
     - tasks:
         - !type:HTNCompoundTask
@@ -130,6 +117,9 @@
     - tasks:
         - !type:HTNCompoundTask
           task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FoodCompound
     - tasks:
         - !type:HTNCompoundTask
           task: FollowCompound
@@ -140,7 +130,7 @@
 #region Маяк
 - type: entity
   parent: BaseItem
-  id: AIPsychoBeacon
+  id: AIPsychoNeutralBeacon
   name: маяк ГРЕЙТАЙДЕРОВ
   description: Маленький маяк, призванный помочь вам управлять отрядами ГРЕЙТАЙДЕРОВ.
   categories: [ HideSpawnMenu ]
@@ -165,17 +155,17 @@
   - type: Anchorable
   - type: Tag
     tags:
-    - AIPsychoBeacon
+    - AIPsychoNeutralBeacon
   - type: TimedDespawn
     lifetime: 7200
 
 - type: Tag
-  id: AIPsychoBeacon
+  id: AIPsychoNeutralBeacon
 
 #region Бедность
 - type: entity
-  parent: AIPsychoBase
-  id: AIPsychoPoorBase
+  parent: AIPsychoNeutralBase
+  id: AIPsychoNeutralPoorBase
   name: AI Псих
   suffix: Бедный
   categories: [ HideSpawnMenu ]
@@ -184,28 +174,11 @@
     prototypes:
     - AIPsychoPoorGear
 
-- type: startingGear
-  id: AIPsychoPoorGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitColorGrey
-    back: NFClothingBackpack
-    ears: ClothingHeadsetGreyCommon
-    gloves: ClothingHandsGlovesColorYellow
-    shoes: ClothingShoesColorBlack
-    id: ContractorPDA
-    pocket2: Cablecuffs
-    belt: ClothingBeltUtility
-  storage:
-    back:
-    - ClothingMaskBreath
-    - NFBoxSurvival
-    - EmergencyRockCutter
-
 #region Вариации ттс
 #1
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor1
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor1
   name: AI Псих
   suffix: Бедный 1
   categories: [ HideSpawnMenu ]
@@ -215,8 +188,8 @@
 
 #2
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor2
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor2
   name: AI Псих
   suffix: Бедный 2
   categories: [ HideSpawnMenu ]
@@ -226,8 +199,8 @@
 
 #3
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor3
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor3
   name: AI Псих
   suffix: Бедный 3
   categories: [ HideSpawnMenu ]
@@ -237,8 +210,8 @@
 
 #4
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor4
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor4
   name: AI Псих
   suffix: Бедный 4
   categories: [ HideSpawnMenu ]
@@ -248,8 +221,8 @@
 
 #5
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor5
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor5
   name: AI Псих
   suffix: Бедный 5
   categories: [ HideSpawnMenu ]
@@ -259,8 +232,8 @@
 
 #6
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor6
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor6
   name: AI Псих
   suffix: Бедный 6
   categories: [ HideSpawnMenu ]
@@ -270,8 +243,8 @@
 
 #7
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor7
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor7
   name: AI Псих
   suffix: Бедный 7
   categories: [ HideSpawnMenu ]
@@ -281,8 +254,8 @@
 
 #8
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor8
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor8
   name: AI Псих
   suffix: Бедный 8
   categories: [ HideSpawnMenu ]
@@ -292,8 +265,8 @@
 
 #9
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor9
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor9
   name: AI Псих
   suffix: Бедный 9
   categories: [ HideSpawnMenu ]
@@ -303,8 +276,8 @@
 
 #10
 - type: entity
-  parent: AIPsychoPoorBase
-  id: AIPsychoPoor10
+  parent: AIPsychoNeutralPoorBase
+  id: AIPsychoNeutralPoor10
   name: AI Псих
   suffix: Бедный 10
   categories: [ HideSpawnMenu ]
@@ -315,8 +288,8 @@
 #region Спавнер
 - type: entity
   parent: MarkerBase
-  id: AIPsychoPoorSpawner
-  name: AIPsychoPoorSpawner
+  id: AIPsychoNeutralPoorSpawner
+  name: AIPsychoNeutralPoorSpawner
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -326,23 +299,23 @@
       state: diamond
   - type: RandomSpawner
     prototypes:
-    - AIPsychoPoor1
-    - AIPsychoPoor2
-    - AIPsychoPoor3
-    - AIPsychoPoor4
-    - AIPsychoPoor5
-    - AIPsychoPoor6
-    - AIPsychoPoor7
-    - AIPsychoPoor8
-    - AIPsychoPoor9
-    - AIPsychoPoor10
+    - AIPsychoNeutralPoor1
+    - AIPsychoNeutralPoor2
+    - AIPsychoNeutralPoor3
+    - AIPsychoNeutralPoor4
+    - AIPsychoNeutralPoor5
+    - AIPsychoNeutralPoor6
+    - AIPsychoNeutralPoor7
+    - AIPsychoNeutralPoor8
+    - AIPsychoNeutralPoor9
+    - AIPsychoNeutralPoor10
     chance: 1
     offset: 0.2
 
 #region Сварщик
 - type: entity
-  parent: AIPsychoBase
-  id: AIPsychoWelderBase
+  parent: AIPsychoNeutralBase
+  id: AIPsychoNeutralWelderBase
   name: AI Псих
   suffix: Сварщик
   categories: [ HideSpawnMenu ]
@@ -351,39 +324,11 @@
     prototypes:
     - AIPsychoWelderGear
 
-- type: startingGear
-  id: AIPsychoWelderGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitColorYellow
-    back: ClothingBackpackDuffelEngineering
-    mask: ClothingMaskWeldingGas
-    eyes: ClothingEyesGlassesMeson
-    ears: ClothingHeadsetGreyCommon
-    gloves: ClothingHandsGlovesColorYellow
-    outerClothing: ClothingOuterVestHazard
-    shoes: ClothingShoesColorBlack
-    id: ContractorPDA
-    pocket1: ShardGlass
-    pocket2: FireBomb
-    belt: ClothingBeltUtilityEngineering
-  storage:
-    back:
-    - ClothingMaskBreath
-    - NFBoxSurvival
-    - EmergencyRockCutter
-    - Bola
-    - FireBombFuel
-    - ShardGlass
-    - MaterialCloth1
-    - SpaceCash1000
-  inhand:
-  - Welder
-
 #region Вариации ттс
 #1
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder1
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder1
   name: AI Псих
   suffix: Сварщик 1
   categories: [ HideSpawnMenu ]
@@ -393,8 +338,8 @@
 
 #2
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder2
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder2
   name: AI Псих
   suffix: Сварщик 2
   categories: [ HideSpawnMenu ]
@@ -404,8 +349,8 @@
 
 #3
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder3
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder3
   name: AI Псих
   suffix: Сварщик 3
   categories: [ HideSpawnMenu ]
@@ -415,8 +360,8 @@
 
 #4
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder4
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder4
   name: AI Псих
   suffix: Сварщик 4
   categories: [ HideSpawnMenu ]
@@ -426,8 +371,8 @@
 
 #5
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder5
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder5
   name: AI Псих
   suffix: Сварщик 5
   categories: [ HideSpawnMenu ]
@@ -437,8 +382,8 @@
 
 #6
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder6
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder6
   name: AI Псих
   suffix: Сварщик 6
   categories: [ HideSpawnMenu ]
@@ -448,8 +393,8 @@
 
 #7
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder7
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder7
   name: AI Псих
   suffix: Сварщик 7
   categories: [ HideSpawnMenu ]
@@ -459,8 +404,8 @@
 
 #8
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder8
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder8
   name: AI Псих
   suffix: Сварщик 8
   categories: [ HideSpawnMenu ]
@@ -470,8 +415,8 @@
 
 #9
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder9
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder9
   name: AI Псих
   suffix: Сварщик 9
   categories: [ HideSpawnMenu ]
@@ -481,8 +426,8 @@
 
 #10
 - type: entity
-  parent: AIPsychoWelderBase
-  id: AIPsychoWelder10
+  parent: AIPsychoNeutralWelderBase
+  id: AIPsychoNeutralWelder10
   name: AI Псих
   suffix: Сварщик 10
   categories: [ HideSpawnMenu ]
@@ -493,8 +438,8 @@
 #region Спавнер
 - type: entity
   parent: MarkerBase
-  id: AIPsychoWelderSpawner
-  name: AIPsychoWelderSpawner
+  id: AIPsychoNeutralWelderSpawner
+  name: AIPsychoNeutralWelderSpawner
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -504,23 +449,23 @@
       state: diamond
   - type: RandomSpawner
     prototypes:
-    - AIPsychoWelder1
-    - AIPsychoWelder2
-    - AIPsychoWelder3
-    - AIPsychoWelder4
-    - AIPsychoWelder5
-    - AIPsychoWelder6
-    - AIPsychoWelder7
-    - AIPsychoWelder8
-    - AIPsychoWelder9
-    - AIPsychoWelder10
+    - AIPsychoNeutralWelder1
+    - AIPsychoNeutralWelder2
+    - AIPsychoNeutralWelder3
+    - AIPsychoNeutralWelder4
+    - AIPsychoNeutralWelder5
+    - AIPsychoNeutralWelder6
+    - AIPsychoNeutralWelder7
+    - AIPsychoNeutralWelder8
+    - AIPsychoNeutralWelder9
+    - AIPsychoNeutralWelder10
     chance: 1
     offset: 0.2
 
 #region Ломатель
 - type: entity
-  parent: AIPsychoBase
-  id: AIPsychoBreakerBase
+  parent: AIPsychoNeutralBase
+  id: AIPsychoNeutralBreakerBase
   name: AI Псих
   suffix: ломатель
   categories: [ HideSpawnMenu ]
@@ -529,41 +474,11 @@
     prototypes:
     - AIPsychoBreakerGear
 
-- type: startingGear
-  id: AIPsychoBreakerGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitColorGrey
-    back: NFClothingBackpack
-    mask: ClothingMaskGas
-    eyes: ClothingEyesGlassesMeson
-    ears: ClothingHeadsetGreyCommon
-    gloves: ClothingHandsGlovesColorYellow
-    outerClothing: ClothingOuterArmorBasic
-    shoes: ClothingShoesColorBlack
-    id: ContractorPDA
-    pocket1: Soap
-    pocket2: FlashlightLantern
-    belt: ClothingBeltUtilityEngineering
-  storage:
-    back:
-    - ClothingMaskBreath
-    - NFBoxSurvival
-    - EmergencyRockCutter
-    - DrinkSpaceLube
-    - Shiv
-    - Flash
-    - ShardGlassReinforced
-    - ShardGlassReinforced
-    - ShardGlassReinforced
-    - WeaponFlareGun
-  inhand:
-  - ToolboxEmergencyFilled
-
 #region Вариации ттс
 #1
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker1
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker1
   name: AI Псих
   suffix: Ломатель 1
   categories: [ HideSpawnMenu ]
@@ -573,8 +488,8 @@
 
 #2
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker2
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker2
   name: AI Псих
   suffix: Ломатель 2
   categories: [ HideSpawnMenu ]
@@ -584,8 +499,8 @@
 
 #3
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker3
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker3
   name: AI Псих
   suffix: Ломатель 3
   categories: [ HideSpawnMenu ]
@@ -595,8 +510,8 @@
 
 #4
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker4
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker4
   name: AI Псих
   suffix: Ломатель 4
   categories: [ HideSpawnMenu ]
@@ -606,8 +521,8 @@
 
 #5
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker5
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker5
   name: AI Псих
   suffix: Ломатель 5
   categories: [ HideSpawnMenu ]
@@ -617,8 +532,8 @@
 
 #6
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker6
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker6
   name: AI Псих
   suffix: Ломатель 6
   categories: [ HideSpawnMenu ]
@@ -628,8 +543,8 @@
 
 #7
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker7
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker7
   name: AI Псих
   suffix: Ломатель 7
   categories: [ HideSpawnMenu ]
@@ -638,8 +553,8 @@
     voice: Graves
 #8
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker8
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker8
   name: AI Псих
   suffix: Ломатель 8
   categories: [ HideSpawnMenu ]
@@ -649,8 +564,8 @@
 
 #9
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker9
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker9
   name: AI Псих
   suffix: Ломатель 9
   categories: [ HideSpawnMenu ]
@@ -660,8 +575,8 @@
 
 #10
 - type: entity
-  parent: AIPsychoBreakerBase
-  id: AIPsychoBreaker10
+  parent: AIPsychoNeutralBreakerBase
+  id: AIPsychoNeutralBreaker10
   name: AI Псих
   suffix: Ломатель 10
   categories: [ HideSpawnMenu ]
@@ -672,8 +587,8 @@
 #region Спавнер
 - type: entity
   parent: MarkerBase
-  id: AIPsychoBreakerSpawner
-  name: AIPsychoBreakerSpawner
+  id: AIPsychoNeutralBreakerSpawner
+  name: AIPsychoNeutralBreakerSpawner
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -683,24 +598,24 @@
       state: diamond
   - type: RandomSpawner
     prototypes:
-    - AIPsychoBreaker1
-    - AIPsychoBreaker2
-    - AIPsychoBreaker3
-    - AIPsychoBreaker4
-    - AIPsychoBreaker5
-    - AIPsychoBreaker6
-    - AIPsychoBreaker7
-    - AIPsychoBreaker8
-    - AIPsychoBreaker9
-    - AIPsychoBreaker10
+    - AIPsychoNeutralBreaker1
+    - AIPsychoNeutralBreaker2
+    - AIPsychoNeutralBreaker3
+    - AIPsychoNeutralBreaker4
+    - AIPsychoNeutralBreaker5
+    - AIPsychoNeutralBreaker6
+    - AIPsychoNeutralBreaker7
+    - AIPsychoNeutralBreaker8
+    - AIPsychoNeutralBreaker9
+    - AIPsychoNeutralBreaker10
     chance: 1
     offset: 0.2
 
 
 #region Станнер
 - type: entity
-  parent: AIPsychoBase
-  id: AIPsychoStunBase
+  parent: AIPsychoNeutralBase
+  id: AIPsychoNeutralStunBase
   name: AI Псих
   suffix: Станнер
   categories: [ HideSpawnMenu ]
@@ -758,41 +673,11 @@
     rechargeCooldown: 120
     rechargeSound: /Audio/_NF/Effects/silence.ogg
 
-- type: startingGear
-  id: AIPsychoStunGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitPilot
-    back: ClothingBackpackDuffelPilot
-    mask: ClothingMaskPilot
-    eyes: ClothingEyesGlassesPilot
-    ears: ClothingHeadsetGreyCommon
-    gloves: ClothingHandsGlovesPilot
-    outerClothing: ClothingOuterHardsuitSpatio
-    shoes: ClothingShoesBootsMag
-    id: PilotPDA
-    pocket1: AmmoBox357_magnumRubber
-    pocket2: WeaponRevolverArgentiNonlethal
-    belt: ClothingBeltUtilityEngineering
-  storage:
-    back:
-    - ClothingMaskBreath
-    - NFBoxSurvival
-    - EmergencyRockCutter
-    - HandHeldMassScanner
-    - RemoteSignaller
-    - trayScanner
-    - AmmoBox127x99mm
-    - ClothingHeadHatCowboyWhite
-    - PlushieCarp
-    - FireExtinguisher
-  inhand:
-  - WeaponDisabler
-
 #region Вариации ттс
 #1
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun1
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun1
   name: AI Псих
   suffix: Станнер 1
   categories: [ HideSpawnMenu ]
@@ -802,8 +687,8 @@
 
 #2
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun2
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun2
   name: AI Псих
   suffix: Станнер 2
   categories: [ HideSpawnMenu ]
@@ -813,8 +698,8 @@
 
 #3
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun3
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun3
   name: AI Псих
   suffix: Станнер 3
   categories: [ HideSpawnMenu ]
@@ -824,8 +709,8 @@
 
 #4
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun4
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun4
   name: AI Псих
   suffix: Станнер 4
   categories: [ HideSpawnMenu ]
@@ -835,8 +720,8 @@
 
 #5
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun5
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun5
   name: AI Псих
   suffix: Станнер 5
   categories: [ HideSpawnMenu ]
@@ -846,8 +731,8 @@
 
 #6
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun6
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun6
   name: AI Псих
   suffix: Станнер 6
   categories: [ HideSpawnMenu ]
@@ -857,8 +742,8 @@
 
 #7
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun7
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun7
   name: AI Псих
   suffix: Станнер 7
   categories: [ HideSpawnMenu ]
@@ -868,8 +753,8 @@
 
 #8
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun8
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun8
   name: AI Псих
   suffix: Станнер 8
   categories: [ HideSpawnMenu ]
@@ -879,8 +764,8 @@
 
 #9
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun9
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun9
   name: AI Псих
   suffix: Станнер 9
   categories: [ HideSpawnMenu ]
@@ -890,8 +775,8 @@
 
 #10
 - type: entity
-  parent: AIPsychoStunBase
-  id: AIPsychoStun10
+  parent: AIPsychoNeutralStunBase
+  id: AIPsychoNeutralStun10
   name: AI Псих
   suffix: Станнер 10
   categories: [ HideSpawnMenu ]
@@ -902,8 +787,8 @@
 #region Спавнер
 - type: entity
   parent: MarkerBase
-  id: AIPsychoStunSpawner
-  name: AIPsychoStunSpawner
+  id: AIPsychoNeutralStunSpawner
+  name: AIPsychoNeutralStunSpawner
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -913,15 +798,15 @@
       state: diamond
   - type: RandomSpawner
     prototypes:
-    - AIPsychoStun1
-    - AIPsychoStun2
-    - AIPsychoStun3
-    - AIPsychoStun4
-    - AIPsychoStun5
-    - AIPsychoStun6
-    - AIPsychoStun7
-    - AIPsychoStun8
-    - AIPsychoStun9
-    - AIPsychoStun10
+    - AIPsychoNeutralStun1
+    - AIPsychoNeutralStun2
+    - AIPsychoNeutralStun3
+    - AIPsychoNeutralStun4
+    - AIPsychoNeutralStun5
+    - AIPsychoNeutralStun6
+    - AIPsychoNeutralStun7
+    - AIPsychoNeutralStun8
+    - AIPsychoNeutralStun9
+    - AIPsychoNeutralStun10
     chance: 1
     offset: 0.2

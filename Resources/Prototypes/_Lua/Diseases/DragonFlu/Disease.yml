@@ -226,9 +226,10 @@
   - type: MobMover
   - type: InputMover
   - type: MovementSpeedModifier
-    baseWalkSpeed: 3
-    baseRunningSpeed: 5
-    baseWeightlessModifier: 1.5
+    baseWalkSpeed: 4
+    baseRunningSpeed: 6
+    baseSprintSpeed: 8
+    baseWeightlessModifier: 3
   - type: RandomSprite
     available:
     - enum.DamageStateVisualLayers.Base:

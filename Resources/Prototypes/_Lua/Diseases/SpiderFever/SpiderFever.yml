@@ -157,7 +157,7 @@
     forced: true
     inventory: None
     transferName: true
-    revertOnCrit: false
+    revertOnCrit: true
     revertOnDeath: true
     exitPolymorphSound: /Audio/Effects/demon_consume.ogg
 
@@ -232,8 +232,12 @@
     damage:
       types:
         Piercing: 6
-  - type: ReplacementAccent
-    accent: xeno
+  - type: InfectOnMelee
+    disease: SpiderFever
+    infectChance: 1
+  - type: DiseaseCarrier
+    naturalImmunities:
+    - SpiderFever
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-tarantula

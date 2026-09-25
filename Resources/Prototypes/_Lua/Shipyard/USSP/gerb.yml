@@ -1,0 +1,36 @@
+- type: vessel
+  id: Gerb
+  parent: BaseVesselAntag
+  name: Gerb
+  description: Один из флагманов Фронтирской верфи Союза Советских Социалистических Планет. Поставляется в штучных экземплярах.
+  limit: 1
+  price: 439128
+  mass: 267
+  category: Medium
+  group: Ussp
+  access: USSP
+  shuttlePath: /Maps/_Lua/Shuttles/USSP/Gerb.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  - Capital
+  engine:
+  - Bluespace
+
+- type: gameMap
+  id: Gerb
+  mapName: 'Gerb'
+  mapPath: /Maps/_Lua/Shuttles/USSP/Gerb.yml
+  minPlayers: 0
+  stations:
+    Gerb:
+      stationProto: StandardFrontierVessel
+      gridComponents:
+      - type: VesselInfo
+        description: "Outdated, yet still reliable."
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Gerb {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

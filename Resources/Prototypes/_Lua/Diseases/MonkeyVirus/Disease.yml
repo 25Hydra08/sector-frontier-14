@@ -157,7 +157,7 @@
     forced: true
     inventory: None
     transferName: true
-    revertOnCrit: false
+    revertOnCrit: true
     revertOnDeath: true
     exitPolymorphSound: /Audio/Effects/demon_consume.ogg
 
@@ -258,6 +258,7 @@
     tags:
     - VimPilot
     - DoorBumpOpener
+    - CanPilot
   - type: Reactive
     groups:
       Flammable: [ Touch ]

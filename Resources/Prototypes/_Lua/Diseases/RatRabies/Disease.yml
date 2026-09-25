@@ -165,7 +165,7 @@
     forced: true
     inventory: None
     transferName: true
-    revertOnCrit: false
+    revertOnCrit: true
     revertOnDeath: true
     exitPolymorphSound: /Audio/Effects/demon_consume.ogg
 
@@ -176,7 +176,7 @@
     forced: true
     inventory: None
     transferName: true
-    revertOnCrit: false
+    revertOnCrit: true
     revertOnDeath: true
     exitPolymorphSound: /Audio/Effects/demon_consume.ogg
 
@@ -241,6 +241,12 @@
       types:
         Slash: 12
         Piercing: 8
+  - type: InfectOnMelee
+    disease: RatRabies
+    infectChance: 1
+  - type: DiseaseCarrier
+    naturalImmunities:
+    - RatRabies
   - type: Body
     prototype: Rat
     requiredLegs: 1 # TODO: More than 1 leg
@@ -251,7 +257,7 @@
       Peckish: 100
       Starving: 50
       Dead: 0
-    baseDecayRate: 0.01666666666
+    baseDecayRate: -0.01666666666
   - type: Thirst
     thresholds:
       OverHydrated: 600
@@ -273,6 +279,7 @@
     tags:
       - CannotSuicide
       - FootstepSound
+      - CanPilot
   - type: NoSlip
   - type: RatKing
     hungerPerArmyUse: 25

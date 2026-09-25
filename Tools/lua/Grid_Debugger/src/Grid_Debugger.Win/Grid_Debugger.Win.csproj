@@ -5,6 +5,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Application icon (.ico) -->
+    <ApplicationIcon>..\..\icons\iconGD512x512.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Grid_Debugger.Core\Grid_Debugger.Core.csproj" />

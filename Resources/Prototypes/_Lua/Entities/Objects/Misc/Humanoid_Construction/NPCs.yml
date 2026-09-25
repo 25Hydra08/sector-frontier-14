@@ -30,6 +30,7 @@
     follow: true
     spawnFriendsSearchRadius: 3
   - type: AutoWakeUp
+  - type: AutoDespawnExempt
 
 - type: htnCompound
   id: BodyguardCompound
@@ -40,6 +41,9 @@
     - tasks:
         - !type:HTNCompoundTask
           task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FoodCompound
     - tasks:
         - !type:HTNCompoundTask
           task: FollowCompound
@@ -98,6 +102,7 @@
         !type:DamageTrigger
         damage: 400
       behaviors:
+      -	!type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
@@ -132,13 +137,9 @@
       - !type:EntSelector
         id: CrimsonSporeFlesh1
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: FoodMeatRotten
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: MaterialBiomass1
 
 #region нейтр. Агр.
 - type: entity
@@ -165,6 +166,7 @@
         !type:DamageTrigger
         damage: 400
       behaviors:
+      -	!type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
@@ -199,13 +201,9 @@
       - !type:EntSelector
         id: CrimsonSporeFlesh1
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: FoodMeatRotten
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: MaterialBiomass1
 
 #region нейтр
 - type: entity
@@ -217,6 +215,8 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: NPCRetaliation
+    attackMemoryLength: 60
   - type: AutoWakeUp
 #монтаж и демонтаж
   - type: Construction
@@ -232,6 +232,7 @@
         !type:DamageTrigger
         damage: 400
       behaviors:
+      -	!type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
@@ -266,13 +267,9 @@
       - !type:EntSelector
         id: CrimsonSporeFlesh1
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: FoodMeatRotten
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: MaterialBiomass1
 
 #region НТ
 - type: entity
@@ -299,6 +296,7 @@
         !type:DamageTrigger
         damage: 400
       behaviors:
+      -	!type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
@@ -333,20 +331,16 @@
       - !type:EntSelector
         id: CrimsonSporeFlesh1
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: FoodMeatRotten
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: MaterialBiomass1
 
-#region Кодекс Бури
+#region Пираты
 - type: entity
   parent: MobBodyguardBase
-  id: MobBodyguardStormCreed
-  name: телохранитель Кодекса Бури
-  description: Телохранитель, спора которого ограничена модулем контроля сознания Кодекса Бури. Атакует атакует тех кто не состоит в Кодексе Бури, но не трогает своих создателей, кем бы они ни были.
+  id: MobBodyguardPirate
+  name: телохранитель Пиратов
+  description: Телохранитель, спора которого ограничена модулем контроля сознания Пиратов. Атакует атакует тех кто не состоит в пиратской общине, но не трогает своих создателей, кем бы они ни были.
   components:
   - type: NpcFactionMember
     factions:
@@ -354,11 +348,11 @@
   - type: AutoWakeUp
 #монтаж и демонтаж
   - type: Construction
-    graph: MobBodyguardStormCreedGraph
-    node: MobBodyguardStormCreed
+    graph: MobBodyguardPirateGraph
+    node: MobBodyguardPirate
   - type: Butcherable
     spawned:
-    - id: MobBodyguardStormCreedGib
+    - id: MobBodyguardPirateGib
       amount: 1
   - type: Destructible
     thresholds:
@@ -366,6 +360,7 @@
         !type:DamageTrigger
         damage: 400
       behaviors:
+      -	!type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
@@ -373,14 +368,14 @@
           collection: gib
       - !type:SpawnEntitiesBehavior
         spawn:
-          MobBodyguardStormCreedGib:
+          MobBodyguardPirateGib:
             min: 1
             max: 1
 
 #спавнер для гиба
 - type: entity
-  name: MobBodyguardStormCreedGib
-  id: MobBodyguardStormCreedGib
+  name: MobBodyguardPirateGib
+  id: MobBodyguardPirateGib
   parent: MarkerBase
   categories: [ HideSpawnMenu ]
   components:
@@ -396,17 +391,13 @@
     table: !type:AllSelector
       children:
       - !type:EntSelector
-        id: HumanoidEndoskeletonStormCreed
+        id: HumanoidEndoskeletonPirate
       - !type:EntSelector
         id: CrimsonSporeFlesh1
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: FoodMeatRotten
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: MaterialBiomass1
 
 #region Синдикат
 - type: entity
@@ -433,6 +424,7 @@
         !type:DamageTrigger
         damage: 400
       behaviors:
+      -	!type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
@@ -467,10 +459,6 @@
       - !type:EntSelector
         id: CrimsonSporeFlesh1
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: FoodMeatRotten
       - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
-      - !type:EntSelector
-        id: CrimsonSporeFlesh1
+        id: MaterialBiomass1

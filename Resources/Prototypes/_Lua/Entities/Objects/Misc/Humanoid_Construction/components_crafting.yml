@@ -143,22 +143,22 @@
     entity: HumanoidEndoskeletonNT
 
 - type: construction
-  id: HumanoidEndoskeletonStormCreed
-  graph: HumanoidEndoskeletonStormCreedGraph
+  id: HumanoidEndoskeletonPirate
+  graph: HumanoidEndoskeletonPirateGraph
   startNode: start
-  targetNode: HumanoidEndoskeletonStormCreed
+  targetNode: HumanoidEndoskeletonPirate
   category: BioCategory
   objectType: Item
   placementMode: SnapgridCenter
   canBuildInImpassable: false
 
 - type: constructionGraph
-  id: HumanoidEndoskeletonStormCreedGraph
+  id: HumanoidEndoskeletonPirateGraph
   start: start
   graph:
   - node: start
     edges:
-    - to: HumanoidEndoskeletonStormCreed
+    - to: HumanoidEndoskeletonPirate
       completed:
       - !type:SnapToGrid
       steps:
@@ -168,14 +168,14 @@
           sprite: _NF/Mobs/RogueSilicons/robots.rsi
           state: body_light
         doAfter: 2
-      - tag: MindControlModuleStormCreed
-        name: MindControlModuleStormCreed-name
+      - tag: MindControlModulePirate
+        name: MindControlModulePirate-name
         icon:
           sprite: Objects/Devices/encryption_keys.rsi
           state: pirate_label
         doAfter: 2
-  - node: HumanoidEndoskeletonStormCreed
-    entity: HumanoidEndoskeletonStormCreed
+  - node: HumanoidEndoskeletonPirate
+    entity: HumanoidEndoskeletonPirate
 
 
 - type: construction
@@ -320,22 +320,22 @@
     entity: MindControlModuleNT
 
 - type: construction
-  id: MindControlModuleStormCreed
-  graph: MindControlModuleStormCreedGraph
+  id: MindControlModulePirate
+  graph: MindControlModulePirateGraph
   startNode: start
-  targetNode: MindControlModuleStormCreed
+  targetNode: MindControlModulePirate
   category: BioCategory
   objectType: Item
   placementMode: SnapgridCenter
   canBuildInImpassable: false
 
 - type: constructionGraph
-  id: MindControlModuleStormCreedGraph
+  id: MindControlModulePirateGraph
   start: start
   graph:
   - node: start
     edges:
-    - to: MindControlModuleStormCreed
+    - to: MindControlModulePirate
       completed:
       - !type:SnapToGrid
       steps:
@@ -351,8 +351,8 @@
           sprite: Objects/Devices/encryption_keys.rsi
           state: pirate_label
         doAfter: 2
-  - node: MindControlModuleStormCreed
-    entity: MindControlModuleStormCreed
+  - node: MindControlModulePirate
+    entity: MindControlModulePirate
 
 - type: construction
   id: MindControlModuleSyndie

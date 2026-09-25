@@ -166,7 +166,7 @@
   id: DiseaseRatCrimsonSpore
   suffix: Красная Спора
   parent: [ SimpleMobBase, MobCombat, BaseTrashFauna600, NightVisionComfortOrange ]
-  description: Мерзкое облезлое существо, скорее всего оно чем-то болеет. Лучше выбросить в космос.
+  description: Мерзкое облезлое существо, местами покрытое плесенью красного цвета скорее всего оно чем-то болеет. Лучше выбросить в космос.
   components:
   - type: Carriable #DeltaV
     freeHandsRequired: 1
