@@ -11,7 +11,7 @@
   id: HumanoidEndoskeletonNT
 
 - type: Tag
-  id: HumanoidEndoskeletonStormCreed
+  id: HumanoidEndoskeletonPirate
 
 - type: Tag
   id: HumanoidEndoskeletonSyndie
@@ -26,7 +26,7 @@
   id: MindControlModuleNT
 
 - type: Tag
-  id: MindControlModuleStormCreed
+  id: MindControlModulePirate
 
 - type: Tag
   id: MindControlModuleSyndie
