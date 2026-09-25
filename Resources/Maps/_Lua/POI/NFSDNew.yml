@@ -43310,7 +43310,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -21.5,10.5
       parent: 1
-- proto: ComputerUplinkNF
+- proto: ComputerResearchAndDevelopmentTSFMC
   entities:
   - uid: 7011
     components:
