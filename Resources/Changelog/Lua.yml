@@ -5455,3 +5455,29 @@ Entries:
   id: 351
   time: '2026-09-25T17:25:29.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/668
+- author: Maksimvini
+  changes:
+    - type: Add
+      message: скафандры СССПшников в меню их выкладки ролей
+    - type: Add
+      message: Durannell, полноценный ремапп шаттла DuranMK2 на верфи ЧР
+    - type: Remove
+      message: DuranMK2 из верфи ЧР
+    - type: Remove
+      message: Удалены Kunisa и hawk4 из Аплинка ЧРа
+    - type: Tweak
+      message: Ремаппнут шаттл Comentor из верфи ЧРа
+    - type: Tweak
+      message: >-
+        Ремаппнуты пять шаттлов верфи пиратов: Baron, Kveldulf, Santinel,
+        Jormungand, Mercury. Укрепления заменены на Шахтёрские стены, Ультра
+        сервера понижены в Высокомощные.
+    - type: Fix
+      message: некоторая локализация наименований.
+    - type: Fix
+      message: >-
+        Пиратские шаттлы из списка выше теперь проходят по shipstat, не имея
+        запрещённых предметов.
+  id: 352
+  time: '2026-09-25T17:29:14.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/671
