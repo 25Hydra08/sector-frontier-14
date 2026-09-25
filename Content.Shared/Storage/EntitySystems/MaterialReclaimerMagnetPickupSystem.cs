@@ -1,5 +1,6 @@
 using Content.Server.Storage.Components;
 using Content.Shared.Materials;
+using Robust.Shared.Network;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -16,6 +17,7 @@ namespace Content.Shared.Storage.EntitySystems;
 public sealed class MaterialReclaimerMagnetPickupSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedMaterialReclaimerSystem _storage = default!;
 
@@ -89,6 +91,10 @@ public sealed class MaterialReclaimerMagnetPickupSystem : EntitySystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+
+        if (!_net.IsServer)
+            return;
+
         var query = EntityQueryEnumerator<MaterialReclaimerMagnetPickupComponent, MaterialReclaimerComponent, TransformComponent>();
         var currentTime = _timing.CurTime;
 
