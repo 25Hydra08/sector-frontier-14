@@ -5410,3 +5410,12 @@ Entries:
   id: 348
   time: '2026-09-25T16:51:44.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/673
+- author: CQuarian-dev
+  changes:
+    - type: Tweak
+      message: >-
+        Убрано вращение сканера масс в госте/агосте по умолчанию (Кнопки в углу
+        сканера масс позволяют вернуть вращение назад)
+  id: 349
+  time: '2026-09-25T17:18:35.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/669
