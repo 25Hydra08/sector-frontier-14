@@ -3,7 +3,7 @@
   parent: BaseVesselAntag
   name: Komsomol
   description: Весьма распространённый грузовой шаттл СССП. Примечателен своей высокой надёжностью.
-  price: 86433
+  price: 82433
   mass: 116
   category: Small
   group: Ussp
