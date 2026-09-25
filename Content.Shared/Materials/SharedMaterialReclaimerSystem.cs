@@ -9,9 +9,11 @@ using Content.Shared.Examine;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Stacks;
 using Content.Shared.Whitelist;
+using Robust.Shared.Audio.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
+using Robust.Shared.Network;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Timing;
 
@@ -29,6 +31,7 @@ public abstract class SharedMaterialReclaimerSystem : EntitySystem
     [Dependency] protected readonly SharedAudioSystem _audio = default!; // Frontier: private<protected
     [Dependency] protected readonly SharedContainerSystem Container = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private readonly INetManager _net = default!;
     //[Dependency] private readonly EmagSystem _emag = default!; // Frontier: no point
 
     public const string ActiveReclaimerContainerId = "active-material-reclaimer-container";
@@ -130,7 +133,7 @@ public abstract class SharedMaterialReclaimerSystem : EntitySystem
 
             if (predictSound)
                 component.Stream = _audio.PlayPredicted(component.Sound, uid, user)?.Entity;
-            else
+            else if (_net.IsServer)
                 component.Stream = _audio.PlayPvs(component.Sound, uid)?.Entity;
             // End Frontier
             component.NextSound = Timing.CurTime + component.SoundCooldown;
@@ -282,6 +285,34 @@ public abstract class SharedMaterialReclaimerSystem : EntitySystem
             if (Timing.CurTime < active.EndTime)
                 continue;
             TryFinishProcessItem(uid, reclaimer, active);
+        }
+
+        StopOrphanedSounds();
+    }
+
+    private void StopOrphanedSounds()
+    {
+        var audioQuery = GetEntityQuery<AudioComponent>();
+        var query = EntityQueryEnumerator<MaterialReclaimerComponent, TransformComponent>();
+
+        while (query.MoveNext(out var uid, out var reclaimer, out var xform))
+        {
+            if (!reclaimer.CutOffSound)
+                continue;
+
+            if (HasComp<ActiveMaterialReclaimerComponent>(uid) || Timing.CurTime <= reclaimer.NextSound)
+                continue;
+
+            StopSound(reclaimer);
+
+            var children = xform.ChildEnumerator;
+            while (children.MoveNext(out var child))
+            {
+                if (!audioQuery.TryGetComponent(child, out var audio) || !audio.Params.Loop)
+                    continue;
+
+                _audio.Stop(child, audio);
+            }
         }
     }
 }

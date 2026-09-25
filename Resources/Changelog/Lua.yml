@@ -5410,3 +5410,74 @@ Entries:
   id: 348
   time: '2026-09-25T16:51:44.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/673
+- author: CQuarian-dev
+  changes:
+    - type: Tweak
+      message: >-
+        Убрано вращение сканера масс в госте/агосте по умолчанию (Кнопки в углу
+        сканера масс позволяют вернуть вращение назад)
+  id: 349
+  time: '2026-09-25T17:18:35.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/669
+- author: Айко Окада
+  changes:
+    - type: Add
+      message: >-
+        На шаттл Xeno добавлен факс, голопад и душ. (теперь факс рассылки смогут
+        приходить)
+    - type: Remove
+      message: >-
+        На входе шаттла Xeno удалены со шлюзов доступы наёмника, но теперь они
+        блокируются по кнопке на стене.
+    - type: Add
+      message: На шаттл DestroyerBM добавлены гоблинские записки! (помогут со светом)
+    - type: Tweak
+      message: >-
+        На шаттле sprinter система питания и газовых труб переработа. Теперь
+        частично находится под мостиками. (ранее система труб была не целой и
+        без выхода в космос)
+    - type: Tweak
+      message: >-
+        На шаттлах adder и fish было заменено латунное покрытие на обычное. (для
+        удобства декорирования)
+    - type: Fix
+      message: >-
+        На шаттлах archer, Pathfinder, spectre, sprinter были исправлены
+        недочёты с заменой покрытия. (пропущенная клетка латуни и под шлюзами
+        поставлены моноплиты)
+  id: 350
+  time: '2026-09-25T17:19:16.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/667
+- author: CQuarian-dev
+  changes:
+    - type: Tweak
+      message: Переработчик материалов больше не издаёт зацикленный звук.
+  id: 351
+  time: '2026-09-25T17:25:29.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/668
+- author: Maksimvini
+  changes:
+    - type: Add
+      message: скафандры СССПшников в меню их выкладки ролей
+    - type: Add
+      message: Durannell, полноценный ремапп шаттла DuranMK2 на верфи ЧР
+    - type: Remove
+      message: DuranMK2 из верфи ЧР
+    - type: Remove
+      message: Удалены Kunisa и hawk4 из Аплинка ЧРа
+    - type: Tweak
+      message: Ремаппнут шаттл Comentor из верфи ЧРа
+    - type: Tweak
+      message: >-
+        Ремаппнуты пять шаттлов верфи пиратов: Baron, Kveldulf, Santinel,
+        Jormungand, Mercury. Укрепления заменены на Шахтёрские стены, Ультра
+        сервера понижены в Высокомощные.
+    - type: Fix
+      message: некоторая локализация наименований.
+    - type: Fix
+      message: >-
+        Пиратские шаттлы из списка выше теперь проходят по shipstat, не имея
+        запрещённых предметов.
+  id: 352
+  time: '2026-09-25T17:29:14.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/671

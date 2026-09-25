@@ -107,6 +107,7 @@
   - type: RadarConsole
     maxRange: 1024 # Frontier: increase admin radar range
     followEntity: true
+    noRotate: true
     hideCoords: false # Frontier
     maxIffRange: null # Frontier
   - type: DetectionRangeMultiplier
