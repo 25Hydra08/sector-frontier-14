@@ -5533,3 +5533,10 @@ Entries:
   id: 356
   time: '2026-10-02T13:26:38.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/684
+- author: CQuarian-dev
+  changes:
+    - type: Add
+      message: Ржавые пластитановые стены (только для маппинга)
+  id: 357
+  time: '2026-10-02T13:29:21.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/678
