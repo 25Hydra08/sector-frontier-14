@@ -5519,3 +5519,10 @@ Entries:
   id: 354
   time: '2026-09-25T18:15:06.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/670
+- author: Rendin0
+  changes:
+    - type: Fix
+      message: Исправлена уязвимость копировального аппарата
+  id: 355
+  time: '2026-10-02T13:25:33.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/683
