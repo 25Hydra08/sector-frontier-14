@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/tgstation/tgstation/tree/dfb73d28e68aa56c34c7c539448f713b78b6d4d5, resprited by Sokovizhimalka.",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "full"
+      },
+      {
+        "name": "pirateplastitanium0",
+        "directions": 4
+      },
+      {
+        "name": "pirateplastitanium1",
+        "directions": 4
+      },
+      {
+        "name": "pirateplastitanium2",
+        "directions": 4
+      },
+      {
+        "name": "pirateplastitanium3",
+        "directions": 4
+      },
+      {
+        "name": "pirateplastitanium4",
+        "directions": 4
+      },
+      {
+        "name": "pirateplastitanium5",
+        "directions": 4
+      },
+      {
+        "name": "pirateplastitanium6",
+        "directions": 4
+      },
+      {
+        "name": "pirateplastitanium7",
+        "directions": 4
+      }
+    ]
+  }
+  

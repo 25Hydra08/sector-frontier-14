@@ -135,3 +135,34 @@
     Slash: 0.6
     Piercing: 0.8
     Caustic: 2
+
+- type: damageModifierSet
+  id: StructuralMetallicStrongRust
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.7
+    Piercing: 1
+    Shock: 1.2
+    Structural: 0.6
+  flatReductions:
+    Blunt: 15
+    Slash: 15
+    Piercing: 15
+    Heat: 15
+    Structural: 15
+
+- type: damageModifierSet
+  id: RGlassRust
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.44
+    Piercing: 0.68
+    Heat: 0.6
+    Shock: 0.2
+    Structural: 0.6
+  flatReductions:
+    Blunt: 4
+    Slash: 4
+    Piercing: 4
+    Heat: 4
+    Structural: 8

@@ -1,0 +1,163 @@
+- type: entity
+  parent: WallPlastitanium
+  id: WallPlastitaniumRust
+  name: plastitanium wall
+  suffix: rusted
+  description: A plastitanium wall eaten through by rust. Good enough for pirates.
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Walls/PiratePlastitaniumWall.rsi
+  - type: Icon
+    sprite: _Lua/Structures/Walls/PiratePlastitaniumWall.rsi
+  - type: IconSmooth
+    key: walls
+    base: pirateplastitanium
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrongRust
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2900
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 3200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: WallPlastitaniumDiagonal
+  id: WallPlastitaniumDiagonalRust
+  name: plastitanium wall
+  suffix: diagonal, rusted
+  description: A plastitanium wall eaten through by rust. Good enough for pirates.
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Walls/PiratePlastitaniumDiagonalWall.rsi
+    state: state0
+  - type: Icon
+    sprite: _Lua/Structures/Walls/PiratePlastitaniumDiagonalWall.rsi
+    state: state0
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrongRust
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 1700
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: PlastitaniumWindow
+  id: PlastitaniumWindowRust
+  name: plastitanium window
+  suffix: rusted
+  description: The frame is rusted through, but the glass still holds. Mostly.
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Windows/PiratePlastitaniumWindow.rsi
+  - type: Icon
+    sprite: _Lua/Structures/Windows/PiratePlastitaniumWindow.rsi
+  - type: IconSmooth
+    key: walls
+    base: pirateplastitaniumwindow
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: RGlassRust
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1850
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 1750
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassReinforced:
+            min: 1
+            max: 2
+          PartRodMetal:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: PlastitaniumWindowDiagonal
+  id: PlastitaniumWindowDiagonalRust
+  name: plastitanium window
+  suffix: diagonal, rusted
+  description: The frame is rusted through, but the glass still holds. Mostly.
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Windows/PiratePlastitaniumDiagonalWindow.rsi
+    state: state0
+  - type: Icon
+    sprite: _Lua/Structures/Windows/PiratePlastitaniumDiagonalWindow.rsi
+    state: state0
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: RGlassRust
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1850
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 1750
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassReinforced:
+            min: 1
+            max: 2
+          PartRodMetal:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

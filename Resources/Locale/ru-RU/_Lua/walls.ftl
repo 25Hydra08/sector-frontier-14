@@ -41,3 +41,16 @@ ent-ReinforcedWindowKrissDiagonalIndestructible = { ent-ReinforcedWindowDiagonal
 ent-WallKrissSolidDiagonalIndestructible = { ent-WallReinforcedDiagonal }
     .desc = { ent-WallReinforcedDiagonal.desc }
     .suffix = Неразрушимый
+
+ent-WallPlastitaniumRust = { ent-WallPlastitanium }
+    .desc = Пластитановая стена, изъеденная ржавчиной. Пиратам сойдёт.
+    .suffix = Ржавый
+ent-WallPlastitaniumDiagonalRust = { ent-WallPlastitaniumDiagonal }
+    .desc = { ent-WallPlastitaniumRust.desc }
+    .suffix = Диагональ, Ржавый
+ent-PlastitaniumWindowRust = { ent-PlastitaniumWindow }
+    .desc = Рама проржавела насквозь, но стекло пока держится.
+    .suffix = Ржавый
+ent-PlastitaniumWindowDiagonalRust = { ent-PlastitaniumWindowDiagonal }
+    .desc = { ent-PlastitaniumWindowRust.desc }
+    .suffix = Диагональ, Ржавый
