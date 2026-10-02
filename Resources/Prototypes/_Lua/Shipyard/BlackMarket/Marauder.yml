@@ -7,9 +7,9 @@
   price: 330805
   mass: 457
   category: Medium
-  group: Mercenary
+  group: ASBlackMarket
   access: Mercenary
-  shuttlePath: /Maps/_Lua/Shuttles/Mercenary/Marauder.yml
+  shuttlePath: /Maps/_Lua/Shuttles/BlackMarket/Marauder.yml
   guidebookPage: Null
   class:
   - Mercenary
@@ -19,7 +19,7 @@
 - type: gameMap
   id: Marauder
   mapName: 'Marauder'
-  mapPath: /Maps/_Lua/Shuttles/Mercenary/Marauder.yml
+  mapPath: /Maps/_Lua/Shuttles/BlackMarket/Marauder.yml
   minPlayers: 0
   stations:
     Marauder:
