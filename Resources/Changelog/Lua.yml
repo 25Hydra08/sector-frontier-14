@@ -5526,3 +5526,10 @@ Entries:
   id: 355
   time: '2026-10-02T13:25:33.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/683
+- author: Maksimvini
+  changes:
+    - type: Tweak
+      message: Частота СССП более не на англ ":p", а на русской ":в"
+  id: 356
+  time: '2026-10-02T13:26:38.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/684
