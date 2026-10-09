@@ -1,5 +1,13 @@
 - type: soundCollection
   id: WispMovement
   files:
-  - /Audio/_Lua/Sponsor/HolyPain/HolyPainCrystalBag/BagLand1.ogg
-  - /Audio/_Lua/Sponsor/HolyPain/HolyPainCrystalBag/BagLand2.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispMove1.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispMove2.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispMove3.ogg
+
+- type: soundCollection
+  id: WispInteract
+  files:
+  - /Audio/_Lua/RankSounds/RankWisp/WispInteract1.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispInteract2.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispInteract3.ogg

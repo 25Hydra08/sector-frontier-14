@@ -31,13 +31,13 @@
   - type: Physics
     bodyType: KinematicController
     bodyStatus: InAir
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: WispMovement
-      params:
-        volume: -5
-        maxDistance: 6
-        variation: 0.125
+  # - type: FootstepModifier
+  #   footstepSoundCollection:
+  #     collection: WispMovement
+  #     params:
+  #       volume: -5
+  #       maxDistance: 6
+  #       variation: 0.125
   - type: Fixtures
     fixtures:
       fix1:
@@ -110,17 +110,3 @@
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
-
-- type: soundCollection
-  id: WispMovement
-  files:
-  - /Audio/_Lua/RankSounds/RankWisp/WispMove1.ogg
-  - /Audio/_Lua/RankSounds/RankWisp/WispMove2.ogg
-  - /Audio/_Lua/RankSounds/RankWisp/WispMove3.ogg
-
-- type: soundCollection
-  id: WispInteract
-  files:
-  - /Audio/_Lua/RankSounds/RankWisp/WispInteract1.ogg
-  - /Audio/_Lua/RankSounds/RankWisp/WispInteract2.ogg
-  - /Audio/_Lua/RankSounds/RankWisp/WispInteract3.ogg
