@@ -1,0 +1,126 @@
+#region RankWispBase
+- type: entity
+  abstract: true
+  parent:
+  - FlyingMobBase
+  id: RankWispBase
+  components:
+  - type: MobCollision
+  - type: GravityAffected
+  - type: Clickable
+  - type: InteractionOutline
+  - type: InputMover
+  - type: Input
+    context: "human"
+  - type: LagCompensation
+  - type: MobMover
+  - type: ZombieImmune
+  - type: FTLKnockdownImmune
+  - type: Actions
+  - type: Appearance
+  - type: RotationVisuals
+    defaultRotation: 0
+    horizontalRotation: 0
+  - type: DoAfter
+  - type: Examiner
+  - type: Eye
+  - type: ContentEye
+  - type: CameraRecoil
+  - type: MindContainer
+  - type: CanMoveInAir
+  - type: Physics
+    bodyType: KinematicController
+    bodyStatus: InAir
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: WispMovement
+      params:
+        volume: -5
+        maxDistance: 6
+        variation: 0.125
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 1
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: NpcFactionMember
+    factions: []
+  - type: NPCImprintingOnSpawnBehaviour
+    whitelist:
+      components:
+      - HumanoidAppearance
+    follow: true
+    spawnFriendsSearchRadius: 1
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: RankWispCompound
+    sleepPlayerCheckRangeOverride: 2500
+    blackboard:
+      VisionRadius: !type:Single
+        2000
+      IdleRange: !type:Single
+        3.5
+      FollowCloseRange: !type:Single
+        2.0
+      FollowRange: !type:Single
+        3.0
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 6
+    baseRunningSpeed: 8
+    baseSprintSpeed: 10
+    baseWeightlessModifier: 2
+    baseWeightlessFriction: 3.5
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: AutoWakeUp
+  - type: AutoDespawnExempt
+  - type: EmitSoundOnPickup
+    sound:
+      collection: WispInteract
+      params:
+        volume: -9
+        variation: 0.125
+  - type: EmitSoundOnDrop
+    sound:
+      collection: WispInteract
+      params:
+        volume: -11
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      collection: WispInteract
+      params:
+        volume: -11
+        variation: 0.125
+
+- type: htnCompound
+  id: RankWispCompound
+  branches:
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FollowCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
+
+- type: soundCollection
+  id: WispMovement
+  files:
+  - /Audio/_Lua/RankSounds/RankWisp/WispMove1.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispMove2.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispMove3.ogg
+
+- type: soundCollection
+  id: WispInteract
+  files:
+  - /Audio/_Lua/RankSounds/RankWisp/WispInteract1.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispInteract2.ogg
+  - /Audio/_Lua/RankSounds/RankWisp/WispInteract3.ogg

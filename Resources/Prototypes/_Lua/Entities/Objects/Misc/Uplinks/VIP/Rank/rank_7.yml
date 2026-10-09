@@ -58,3 +58,44 @@
     - rank7
   - !type:ListingLimitedStockCondition
     stock: 1
+
+
+- type: listing
+  id: UplinkVipRank7MobRankWisp7
+  name: uplink-vip-MobRankWisp7-name
+  description: uplink-vip-MobRankWisp7-desc
+  productEntity: MobRankWisp7
+  cost:
+    Speso: 500
+  categories:
+  - UplinkVipTierRank7
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - VipUplink
+  - !type:BuyerSponsorTierCondition
+    whitelist:
+    - rank7
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkVipRank7ClothingNeckCloak7Rank
+  name: uplink-vip-ClothingNeckCloak7Rank-name
+  description: uplink-vip-ClothingNeckCloak7Rank-desc
+  productEntity: ClothingNeckCloak7Rank
+  cost:
+    Speso: 500
+  categories:
+  - UplinkVipTierRank7
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - VipUplink
+  - !type:BuyerSponsorTierCondition
+    whitelist:
+    - rank7
+  - !type:ListingLimitedStockCondition
+    stock: 1

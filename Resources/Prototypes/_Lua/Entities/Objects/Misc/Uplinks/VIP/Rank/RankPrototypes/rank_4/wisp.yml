@@ -1,0 +1,56 @@
+- type: entity
+  parent:
+  - RankWispBase
+  - BaseStorageItem
+  id: MobRankWisp4
+  name: висп IV ранга
+  description: Странный светящийся шар, который следует за своим владельцем. Выдается за выслугу.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Lua/RankEntities/RankWispBase.rsi
+    layers:
+    - state: icon
+      shader: unshaded
+      color: "#eb4b40"
+    - state: icon-glow
+      shader: unshaded
+      color: "#eb4b40"
+  - type: Item
+    sprite: _Lua/RankEntities/RankWispBase.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        shader: unshaded
+        color: "#eb4b40"
+      right:
+      - state: inhand-right
+        shader: unshaded
+        color: "#eb4b40"
+  - type: PointLight
+    energy: 3
+    radius: 5
+    color: "#eb4b40"
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,5,5
+    storageOpenSound:
+      collection: WispInteract
+      params:
+        variation: 0.125
+    storageCloseSound:
+      collection: WispInteract
+      params:
+        variation: 0.125
+    storageInsertSound:
+      collection: WispInteract
+      params:
+        variation: 0.125
+    storageRemoveSound:
+      collection: WispInteract
+      params:
+        variation: 0.125
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container

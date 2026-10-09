@@ -10,7 +10,7 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,11,3 #общее место такое же, поменял расположение ячеек просто
+    - 0,0,11,4 #акционерская сумка в виде кристалла
     storageOpenSound:
       collection: CrystalBagOpening
       params:

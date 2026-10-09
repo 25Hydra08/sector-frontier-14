@@ -1,0 +1,34 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloak8Rank
+  name: плащ VIII ранга
+  description: Лёгкий шёлковый плащ, выдаваемый за выслугу.
+  components:
+  - type: Sprite
+    sprite: _Lua/RankEntities/RankCloakBase.rsi
+    layers:
+    - state: icon
+    - state: icon-glow
+      shader: unshaded
+      color: "#8947f0"
+  - type: Clothing
+    sprite: _Lua/RankEntities/RankCloakBase.rsi
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK
+      - state: equipped-NECK-glow
+        shader: unshaded
+        color: "#8947f0"
+  - type: Item
+    sprite: _Lua/RankEntities/RankCloakBase.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-glow
+        shader: unshaded
+        color: "#8947f0"
+      right:
+      - state: inhand-right
+      - state: inhand-right-glow
+        shader: unshaded
+        color: "#8947f0"

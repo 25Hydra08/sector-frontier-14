@@ -1,4 +1,4 @@
-# Cloak
+#region Cloak
 
 - type: entity
   parent: ClothingNeckBase
@@ -9,8 +9,10 @@
   components:
   - type: Sprite
     sprite: _Lua/Sponsor/unemotional/cloak.rsi
+  - type: Clothing
+    alwaysOnTop: true
 
-# Jumpsuit
+#region Jumpsuit
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformdeFOA
@@ -23,7 +25,7 @@
   - type: Clothing
     sprite: _Lua/Sponsor/unemotional/jumpsuit.rsi
 
-# Magboots
+#region Magboots
 - type: entity
   parent: ClothingShoesBootsMag
   id: ClothingShoesBootsdeFOA
@@ -64,7 +66,7 @@
       walkModifier: 1
       sprintModifier: 1
 
-# Hud
+#region Hud
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons]
   id: ClothingEyesHuddeFOA
@@ -85,8 +87,14 @@
   - type: FlashImmunity
   - type: EyeProtection
   - type: SolutionScanner
+  - type: ThermalVision #термалы как у Холи
+    flashDurationMultiplier: 2
+    pulseTime: 1
+    isEquipment: true
+    color: "#9b9366"
+    toggleAction: ToggleThermalVision
 
-# Belt
+#region Belt
 - type: entity
   parent: [ ClothingBeltStorageBaseNoWeaponSlot, ContentsExplosionResistanceBase ]
   id: ClothingBeltdeFOA
@@ -114,7 +122,7 @@
       - id: HandHeldMassScannerIrisRed
       - id: HolofanProjectorIrisRed
 
-# Gloves
+#region Gloves
 - type: entity
   parent: ClothingHandsGlovesCombat
   id: GlovesdeFOA
@@ -129,7 +137,7 @@
   - type: Item
     size: Tiny
 
-# Mask
+#region Mask
 - type: entity
   parent: ClothingMaskGas
   id: ClothingMaskdeFOA
@@ -142,7 +150,7 @@
   - type: Clothing
     sprite: _Lua/Sponsor/unemotional/gasmask.rsi
 
-# Hardsuit
+#region Hardsuit
 - type: entity
   parent: [ClothingOuterHardsuitAtmos, HardsuitIdentifySponsor, HardsuitSpeedBuff]
   id: ClothingOuterHardsuitdeFOA
@@ -218,7 +226,7 @@
         Piercing: 0.9
         Heat: 0.9
 
-# Paper
+#region Paper
 - type: entity
   parent: PaperPrintedCentcomm
   id: PaperLawsdeFoA
@@ -264,7 +272,7 @@
       ═════════════════════════════════════
       Место для печатей
 
-# Backpack
+#region Backpack
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackdeFoA
@@ -282,3 +290,13 @@
   - type: StorageFill
     contents:
     - id: PaperLawsdeFoA
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterHardsuitdeFOA
+    requiredSlot: BACK
+    slot: outerClothing
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container {}
+      cell_slot: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
