@@ -9,8 +9,6 @@
   components:
   - type: Sprite
     sprite: _Lua/Sponsor/unemotional/cloak.rsi
-  - type: Clothing
-    alwaysOnTop: true
 
 #region Jumpsuit
 - type: entity
