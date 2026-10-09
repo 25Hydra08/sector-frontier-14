@@ -110,6 +110,7 @@
 - type: Tag
   id: RankWispTag
 
+
 #region RankCloakBase
 - type: entity
   abstract: true
