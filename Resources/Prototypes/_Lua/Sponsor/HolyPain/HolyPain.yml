@@ -1,3 +1,4 @@
+#region БСКристал
 - type: entity
   parent: ClothingBackpackDuffel
   id: HolyPainRankKit
