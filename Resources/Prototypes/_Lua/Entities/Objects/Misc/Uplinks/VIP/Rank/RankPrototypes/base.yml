@@ -31,13 +31,8 @@
   - type: Physics
     bodyType: KinematicController
     bodyStatus: InAir
-  # - type: FootstepModifier
-  #   footstepSoundCollection:
-  #     collection: WispMovement
-  #     params:
-  #       volume: -5
-  #       maxDistance: 6
-  #       variation: 0.125
+  - type: Item
+    size: Ginormous
   - type: Fixtures
     fixtures:
       fix1:
@@ -80,6 +75,7 @@
   - type: Tag
     tags:
     - DoorBumpOpener
+    - RankWispTag
   - type: AutoWakeUp
   - type: AutoDespawnExempt
   - type: EmitSoundOnPickup
@@ -110,3 +106,21 @@
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
+
+- type: Tag
+  id: RankWispTag
+
+#region RankCloakBase
+- type: entity
+  abstract: true
+  parent:
+  - ClothingNeckBase
+  id: RankCloakBase
+  components:
+  - type: ItemSlots #Lua
+    slots:
+      item:
+        name: RankWispSlot
+        whitelist:
+          tags:
+          - RankWispTag

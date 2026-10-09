@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingNeckBase
+  parent: RankCloakBase
   id: ClothingNeckCloak9Rank
   name: плащ IX ранга
   description: Лёгкий шёлковый плащ, выдаваемый за выслугу.

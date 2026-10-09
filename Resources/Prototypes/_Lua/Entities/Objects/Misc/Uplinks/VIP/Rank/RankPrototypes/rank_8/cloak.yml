@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingNeckBase
+  parent: RankCloakBase
   id: ClothingNeckCloak8Rank
   name: плащ VIII ранга
   description: Лёгкий шёлковый плащ, выдаваемый за выслугу.

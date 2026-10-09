@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingNeckBase
+  parent: RankCloakBase
   id: ClothingNeckCloak7Rank
   name: плащ VII ранга
   description: Лёгкий шёлковый плащ, выдаваемый за выслугу.

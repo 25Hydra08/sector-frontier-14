@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingNeckBase
+  parent: RankCloakBase
   id: ClothingNeckCloak4Rank
   name: плащ IV ранга
   description: Лёгкий шёлковый плащ, выдаваемый за выслугу.
